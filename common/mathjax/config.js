@@ -17,3 +17,5 @@ MathJax.Hub.Config({
 	mtextFontInherit: true
     }
 });
+
+MathJax.Ajax.loadComplete("https://natsukazeretro.github.io/common/mathjax/config.js");
