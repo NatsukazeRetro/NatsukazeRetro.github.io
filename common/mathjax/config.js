@@ -1,4 +1,4 @@
-window.MathJax = {
+MathJax.Hub.Config({
     tex2jax: {
 	inlineMath: [['$','$'], ['\\(','\\)']],
 	processEscapes: true
@@ -16,6 +16,6 @@ window.MathJax = {
 	scale: 110,
 	mtextFontInherit: true
     }
-};
+});
 
 MathJax.Ajax.loadComplete("https://natsukazeretro.github.io/common/mathjax/config.js");
