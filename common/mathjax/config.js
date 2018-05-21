@@ -18,4 +18,4 @@ MathJax.Hub.Config({
     }
 });
 
-MathJax.Ajax.loadComplete("https://natsukazeretro.githubio/common/mathjax/config.js");
+MathJax.Ajax.loadComplete("https://natsukazeretro.github.io/common/mathjax/config.js");
