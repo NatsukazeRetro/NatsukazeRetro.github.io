@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Asul');
+
+/* ページ */
+#page {
+    width: 980px;
+    margin: 0 auto;
+}
+
+/* ページヘッダー */
+#pageHead #siteTitle {
+    font-size: 30px;
+    line-height: 1.2;
+    font-family: 'Asul', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px cornflowerblue;
+    margin-bottom: 0;
+}
+
+#pageHead #catchcopy {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+/* グローバルナビ */
+#pageHead .globalNavi ul {
+    display: flex;
+}
+
+#pageHead .globalNavi ul li {
+    list-style: none;
+    padding: 0 5px;
+}
+
+/* ページフッター */
+#pageFoot {
+    border-top: solid 1px #CCCCCC;
+    margin-top: 15px;
+}
+
+#pageFoot #copyright small {
+    font-size: 14px;
+    line-height: 1.429;
+}
+
+/* ページボディ */
+
+#pageBody {
+    display: flex;
+    margin-top: 30px;
+}
+
+#pageBodyMain {
+    width: 720px;
+    margin-right: 40px;
+    background-color: #66ccff;
+}
+
+#pageBodySub {
+    width: 220px;
+    background-color: #99ff66;
+}
+
+/* --- サブカラム内の装飾 --- */
+
+/* 見出し */
+#pageBodySub h2 {
+    font-size: 16px;
+    line-height: 1.375;
+    padding: 5px;
+    margin-top: 0;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+/* おしらせ */
+#pageBodySub .newList ul {
+    list-style: none;
+    padding: 0;
+}
+
+#pageBodySub .newList ul li {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 10px 5px;
+}
+
+#pageBodySub .newList ul li time {
+    font-weight: bold;
+    display: block;
+}
+
+/* --- メインカラム内の装飾 --- */
+
+#pageBodyMain p {
+    font-size: 14px;
+    line-height: 1.429;
+}
+
+
+
+
+
+
+

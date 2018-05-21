@@ -1,0 +1,19 @@
+#container {
+    display: flex;
+}
+
+#side {
+    width: 300px;
+    min-height: 100vh;
+    border-right: solid 1px black;
+}
+
+#main {
+    flex: 1;
+}
+
+.breadcrumb {
+    border: solid 1px black;
+    text-align: center;
+    font-size: 30px;
+}
