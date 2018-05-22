@@ -35,7 +35,10 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   //   TEX.Macro("R","{\\bf R}");
   //   TEX.Macro("op","\\mathop{\\rm #1}",1); // a macro with 1 parameter
   
+  TEX.Macro("C","{\\mathbb C}"); 
+  TEX.Macro("Q","{\\mathbb Q}"); 
   TEX.Macro("R","{\\mathbb R}"); 
+  TEX.Macro("Z","{\\mathbb Z}"); 
 });
 
 MathJax.Ajax.loadComplete("[MathJax]/config/local/local.js");
