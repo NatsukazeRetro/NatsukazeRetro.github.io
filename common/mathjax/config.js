@@ -1,8 +1,4 @@
 MathJax.Hub.Config({
-    tex2jax: {
-	inlineMath: [['$','$'], ['\\(','\\)']],
-	processEscapes: true
-    },
     TeX: {
 	equationNumbers: { autoNumber: "AMS" },
 	Macros: {
@@ -17,5 +13,3 @@ MathJax.Hub.Config({
 	mtextFontInherit: true
     }
 });
-
-MathJax.Ajax.loadComplete("https://natsukazeretro.github.io/common/mathjax/config.js");
