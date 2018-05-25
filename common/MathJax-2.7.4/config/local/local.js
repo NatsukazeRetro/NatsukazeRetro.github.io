@@ -37,8 +37,12 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   
   TEX.Macro("C","{\\mathbb C}"); 
   TEX.Macro("Q","{\\mathbb Q}"); 
-  TEX.Macro("R","{\\mathbb R}"); 
+  TEX.Macro("R","\\mathbb{R}"); 
   TEX.Macro("Z","{\\mathbb Z}"); 
+  TEX.Macro("Rn","{\\mathbb R}^n"); 
+
+  TEX.Macro("cloo","C^{\\infty}"); 
+  TEX.Macro("grad","{\\nabla #1}", 1);
 });
 
 MathJax.Ajax.loadComplete("[MathJax]/config/local/local.js");
