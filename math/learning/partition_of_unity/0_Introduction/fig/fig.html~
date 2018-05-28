@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>第 0 章  図 1</title>
+</head>
+
+<body>
+<canvas id="canvas"></canvas>
+<script src="fig_0_1.js"></script>
+</body>

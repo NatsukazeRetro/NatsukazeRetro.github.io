@@ -5,6 +5,22 @@
   <title>Math Craft</title>
   <link rel="stylesheet" href="common/css/normalize.css"></link>
   <link rel="stylesheet" href="common/css/style.css"></link>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 110,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
 </head>
 <body>
 
@@ -26,7 +42,7 @@
 <div id="pageBody">
   <div id="pageBodyMain">
     <article>
-      本文
+      本文 $\Z$
     </article>
   </div>
 

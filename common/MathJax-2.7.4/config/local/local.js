@@ -34,8 +34,29 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   // place macros here.  E.g.:
   //   TEX.Macro("R","{\\bf R}");
   //   TEX.Macro("op","\\mathop{\\rm #1}",1); // a macro with 1 parameter
-  TEX.Macro("R","{\\mathbb R}");
-  
+
+  // 黒板文字
+  TEX.Macro("C","\\mathbb{C}");
+  TEX.Macro("R","\\mathbb{R}");
+  TEX.Macro("Z","\\mathbb{Z}");
+  TEX.Macro("Rn","{\\mathbb R}^n");
+
+  // 括弧
+  TEX.Macro("\par","\\left( #1 \\right)", 1);
+
+  // ドット
+  TEX.Macro("\cd","\\cdots");
+
+  // いろいろな記号
+  TEX.Macro("oo","\\infty");
+
+  // 自作記号
+  TEX.Macro("cloo","C^{\\infty}");
+  TEX.Macro("rec","\\frac{1}{#1}", 1);
+
+  // 環境
+  TEX.Macro("bcs","\\begin{cases}");
+  TEX.Macro("ecs","\\end{cases}");
 });
 
 MathJax.Ajax.loadComplete("[MathJax]/config/local/local.js");
