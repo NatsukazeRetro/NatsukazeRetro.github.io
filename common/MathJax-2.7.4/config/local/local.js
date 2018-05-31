@@ -37,18 +37,32 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 
   // 黒板文字
   TEX.Macro("C","\\mathbb{C}");
+  TEX.Macro("G","\\mathbb{G}");
+  TEX.Macro("H","\\mathbb{H}");
   TEX.Macro("R","\\mathbb{R}");
   TEX.Macro("Z","\\mathbb{Z}");
   TEX.Macro("Rn","{\\mathbb R}^n");
 
   // 括弧
-  TEX.Macro("\par","\\left( #1 \\right)", 1);
+  TEX.Macro("par","\\left( #1 \\right)", 1);
+  TEX.Macro("br","\\left\\{ #1 \\right\\}", 1);
 
   // ドット
-  TEX.Macro("\cd","\\cdots");
+  TEX.Macro("c","\\cdot");
+  TEX.Macro("cd","\\cdots");
+  TEX.Macro("ld","\\ldots");
+  TEX.Macro("vd","\\vdots");
+
+  // 集合記号
+  TEX.Macro("Cup","\\bigcup");
+  TEX.Macro("Qup","\\bigsqcup");
+
+  // 論理記号
+  TEX.Macro("imp","\\Rightarrow");
 
   // いろいろな記号
   TEX.Macro("oo","\\infty");
+  TEX.Macro("rd","\\partial");
 
   // 自作記号
   TEX.Macro("cloo","C^{\\infty}");

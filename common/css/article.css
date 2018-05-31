@@ -1,10 +1,19 @@
+/* 改行抑制*/
+
+.nobr {
+    white-space: nowrap;
+}
+
 html {
     font-size: 24px;
 }
 
+/* header */
+
 header {
     width: 100%;
-    height: 1.6rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
     position: fixed;
     top: 0;
     left:0;
@@ -14,10 +23,18 @@ header {
     z-index: 1;
 }
 
+header h1 {
+    margin: 0;
+    padding-left: 0.1rem;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: normal;
+}
+
 header ul {
     display: inline-block;
-    margin: 0.35rem 0;
-    padding: 0;
+    margin: 0 ;
+    padding-left: 0.2rem;
 }
 
 header ul li{
@@ -25,11 +42,13 @@ header ul li{
     list-style: none;
 }
 
+/*
 header ul li:first-child:before {
     content: '多様体上の単位の分割：';
     padding-left: 0.3em;
     padding-right: 0.4em;
 }
+*/
 
 header ul li:after {
     content: '>';
@@ -47,43 +66,94 @@ header ul li a {
 
 header ul li a:hover {
     text-decoration: none;
+/*    color: lavenderblush; */
     color: mistyrose;
 }
 
-#main {
+/* main  */
+
+main {
     width: 90%;
     max-width: 1000px;
-    margin: 3rem auto 0;
+    margin: 4rem auto 10rem;
 }
 
-p {
+/* 見出し */
+
+main h1.chapter {
+    margin: 4rem 0;
+}
+
+main h2.section {
+    margin: 3rem 0;
+}
+
+main h3 {
+    border-bottom: 1px solid brown;
+}
+
+main p {
     margin-bottom: 2rem;
     line-height: 1.5;
 }
 
-blockquote {
+main blockquote {
     line-height: 1.5;
 }
 
-figure {
+main figure {
     margin: 2rem 0;
     text-align: center;
 }
 
-figcaption {
+main figcaption {
     margin-top: 1rem;
 }
 
-table {
+main table {
     margin: 2rem auto;
 }
 
-table td {
+main table td {
     width: 2rem;
     text-align: center;
 }
 
-table td.heading {
+main table td.heading {
     width: 8rem;
     text-align: right;
+}
+
+main strong:before {
+    content: '「';
+}
+
+main strong:after {
+    content: '」';
+}
+
+main strong {
+    font-weight: normal;
+}
+
+/* 定義, 命題 */
+
+main .definition, main .proposition {
+    margin: 2rem 0 2rem 2rem;
+    padding-left: 1rem;
+    border-left: 5px solid forestgreen;
+}
+
+/* 証明 */
+
+main .proof:before {
+    content: '証明. ';
+    font-weight: bold;
+    color: mediumslateblue;
+}
+
+main .proof:after {
+    content: ' □';
+    font-weight: bold;
+    color: mediumslateblue;
 }
