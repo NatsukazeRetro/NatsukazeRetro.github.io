@@ -56,6 +56,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   // 集合記号
   TEX.Macro("Cup","\\bigcup");
   TEX.Macro("Qup","\\bigsqcup");
+  TEX.Macro("ss","\\subset");
 
   // 論理記号
   TEX.Macro("imp","\\Rightarrow");

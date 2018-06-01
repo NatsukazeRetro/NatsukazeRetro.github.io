@@ -89,17 +89,44 @@ main h2.section {
 }
 
 main h3 {
+    margin: 2rem 0;
     border-bottom: 1px solid brown;
 }
 
-main p {
-    margin-bottom: 2rem;
+/* 段落（p）, 定義, 命題, 証明（div） */
+
+main p, main div {
+    margin: 2rem 0;
     line-height: 1.5;
+}
+
+/* リスト */
+
+main ol li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* 括弧付きリスト */
+
+main ol.parenthesis {
+    counter-reset: number;
+    list-style: none;
+    margin-left: 0;
+    text-indent: -1.6em;
+    padding-left: 1.6em;
+}
+
+main ol.parenthesis li:before {
+    counter-increment: number;
+    content: "(" counter(number) ") ";
 }
 
 main blockquote {
     line-height: 1.5;
 }
+
+/* 図 */
 
 main figure {
     margin: 2rem 0;
@@ -109,6 +136,8 @@ main figure {
 main figcaption {
     margin-top: 1rem;
 }
+
+/* 表 */
 
 main table {
     margin: 2rem auto;
@@ -123,6 +152,8 @@ main table td.heading {
     width: 8rem;
     text-align: right;
 }
+
+/* 強調 */
 
 main strong:before {
     content: '「';
@@ -146,6 +177,14 @@ main .definition, main .proposition {
 
 /* 証明 */
 
+main .proof p:first-child {
+    margin-top: 1rem;
+}
+
+main .proof p:last-child {
+    margin-bottom: 1rem;
+}
+
 main .proof:before {
     content: '証明. ';
     font-weight: bold;
@@ -153,7 +192,7 @@ main .proof:before {
 }
 
 main .proof:after {
-    content: ' □';
+    content: '□□□';
     font-weight: bold;
     color: mediumslateblue;
 }

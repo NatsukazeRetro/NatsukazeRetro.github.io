@@ -70,14 +70,30 @@ $n$ 変数偏微分指定とは, 簡単に言えば, $1$ から $n$ までの数
 <p>
 整数 $n \ge 1$ が固定されているときには, $n$ 変数偏微分指定を, 単に<strong>偏微分指定</strong>と呼ぶこともある.
 </p>
+
+<p>
+以下, 整数 $n \ge 1$ を固定する.
+</p>
+</section>
+
+<section class="subsection">
+<h3>偏微分指定の連結</h3>
+
+偏微分指定 $a = (a_1,\, \ld,\, a_r)$, $b = (b_1,\, \ld,\, b_s)$ の<strong>連結</strong>を,
+
+$$
+a + b := (a_1,\, \ld,\, a_r,\, b_1,\, \ld,\, b_s)
+$$
+
+で定義する.
 </section>
 
 <section class="subsection">
 <h3>微分鎖</h3>
 
-以下, 整数 $n \ge 1$ を固定し, $U$ を $\R^n$ の開集合とする.
+以下, $U$ を $\R^n$ の開集合とする.
 
-<p class="definition">
+<div class="definition">
  $a = (a_1,\, \ld,\, a_r)$ を偏微分指定とする.
  <strong>$U$ 上の $a$ 微分鎖</strong>, あるいは簡単に <strong>$U$ 上の $a$ 鎖</strong>とは, $U$ 上の関数列 $(G_0,\, G_1,\, \ld,\, G_r)$ で, 次の条件をみたすもののことである：
  
@@ -87,10 +103,10 @@ $$
 
  （この条件は, 暗黙的に次の条件を含む：
  $G_{s-1}$ は $U$ 上で $a_s$ 番目の変数に関して偏微分可能である.）
-</p>
+</div>
 
 <p>
-$U$ 上の $\phi$ 鎖とは, 単に, $U$ 上の関数からなる長さ $1$ の列 $(G_0)$ のことである.
+$U$ 上の $\phi$ 鎖とは, 単に, $U$ 上の関数を成分とする長さ $1$ の列 $(G_0)$ のことである.
 そこには何の条件も課されない.
 </p>
 
@@ -113,8 +129,8 @@ $U$ 上の $\phi$ 鎖とは, 単に, ただ $1$ つの $U$ 上の関数 $G_0$ �
 <section class="subsection">
 <h3>微分鎖の一意性</h3>
 
-<p class="proposition">
-$a = (a_1, \ld, a_r)$ を偏微分指定とし,
+<div class="proposition">
+$a = (a_1,\, \ld,\, a_r)$ を偏微分指定とし,
 
 \begin{align*}
 \G &= (G_0,\, G_1,\, \ld,\, G_r), \\
@@ -123,9 +139,10 @@ $a = (a_1, \ld, a_r)$ を偏微分指定とし,
  
 を $U$ 上の $a$ 鎖とする.
 $G_0 = H_0$ であれば, $\G = \H$ である.
-</p>
+</div>
 
 <div class="proof">
+<p>
 $1 \le s \le r$ に対して,
 
 $$
@@ -140,19 +157,8 @@ $$
 
 である.
 したがって, $G_0 = H_0$ であれば, 任意の $0 \le s \le r$ に対して, $G_s = H_s$ である.
+</p>
 </div>
-</section>
-
-<section class="subsection">
-<h3>微分鎖の連結</h3>
-
-偏微分指定 $a = (a_1,\, \ld,\, a_r)$, $b = (b_1,\, \ld,\, b_s)$ の<strong>連結</strong>を,
-
-$$
-a + b := (a_1,\, \ld,\, a_r,\, b_1,\, \ld,\, b_s)
-$$
-
-で定義する.
 </section>
 
 </section>
