@@ -43,6 +43,9 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("Z","\\mathbb{Z}");
   TEX.Macro("Rn","{\\mathbb R}^n");
 
+  // 筆記体
+  TEX.Macro("cF","\\mathcal{F}");
+
   // 括弧
   TEX.Macro("par","\\left( #1 \\right)", 1);
   TEX.Macro("br","\\left\\{ #1 \\right\\}", 1);
@@ -57,9 +60,11 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("Cup","\\bigcup");
   TEX.Macro("Qup","\\bigsqcup");
   TEX.Macro("ss","\\subset");
+  TEX.Macro("set","\\left\\{ #1 \\; \\middle| \\; #2 \\right\\}", 2);
 
   // 論理記号
-  TEX.Macro("imp","\\Rightarrow");
+  TEX.Macro("imp","\\, \\Rightarrow \\,");
+  TEX.Macro("all","\\forall");
 
   // いろいろな記号
   TEX.Macro("oo","\\infty");

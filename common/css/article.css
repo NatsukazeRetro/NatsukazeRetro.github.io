@@ -42,14 +42,6 @@ header ul li{
     list-style: none;
 }
 
-/*
-header ul li:first-child:before {
-    content: '多様体上の単位の分割：';
-    padding-left: 0.3em;
-    padding-right: 0.4em;
-}
-*/
-
 header ul li:after {
     content: '>';
     padding: 0 0.2em;
@@ -76,35 +68,37 @@ main {
     width: 90%;
     max-width: 1000px;
     margin: 4rem auto 10rem;
+    line-height: 1.5;
 }
 
 /* 見出し */
 
 main h1.chapter {
     margin: 4rem 0;
+    line-height: 1.15;
 }
 
 main h2.section {
     margin: 3rem 0;
+    line-height: 1.15;
 }
 
 main h3 {
     margin: 2rem 0;
     border-bottom: 1px solid brown;
+    line-height: 1.15;
 }
 
-/* 段落（p）, 定義, 命題, 証明（div） */
+/* 段落 */
 
-main p, main div {
+main p {
     margin: 2rem 0;
-    line-height: 1.5;
 }
 
 /* リスト */
 
 main ol li {
     margin-bottom: 0.5rem;
-    line-height: 1.5;
 }
 
 /* 括弧付きリスト */
@@ -120,10 +114,6 @@ main ol.parenthesis {
 main ol.parenthesis li:before {
     counter-increment: number;
     content: "(" counter(number) ") ";
-}
-
-main blockquote {
-    line-height: 1.5;
 }
 
 /* 図 */
@@ -176,6 +166,10 @@ main .definition, main .proposition {
 }
 
 /* 証明 */
+
+main .proof {
+    margin-bottom: 3rem;
+}
 
 main .proof p:first-child {
     margin-top: 1rem;
