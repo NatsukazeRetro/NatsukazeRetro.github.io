@@ -77,12 +77,12 @@ main {
 
 /* 見出し */
 
-main h1.chapter {
+main h1 {
     margin: 4rem 0;
     line-height: 1.15;
 }
 
-main h2.section {
+main h2 {
     margin: 3rem 0;
     line-height: 1.15;
 }

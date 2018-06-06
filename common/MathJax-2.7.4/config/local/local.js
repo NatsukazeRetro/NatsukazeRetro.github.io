@@ -36,6 +36,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   //   TEX.Macro("op","\\mathop{\\rm #1}",1); // a macro with 1 parameter
 
   // ギリシャ文字
+  TEX.Macro("a","\\alpha");
   TEX.Macro("ph","\\varphi");
   TEX.Macro("ps","\\psi");
 
@@ -75,6 +76,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 
   // 論理記号
   TEX.Macro("imp","\\, \\Rightarrow \\,");
+  TEX.Macro("equ","\\, \\Leftrightarrow \\,");
   TEX.Macro("all","\\forall");
 
   // いろいろな記号
