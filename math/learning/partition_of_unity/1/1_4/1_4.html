@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>1.4 R^n 上の C^∞ 関数の和, 積, 商および合成</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>1.4 $\,\Rn$ 上の $\Coo$ 関数の和, 積, 商および合成</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2 class="section">$1.4$　$\Rn$ 上の $\Coo$ 関数の和, 積, 商および合成</h2>
+
+<p>
+以下, 整数 $n \ge 1$ を固定し, $U$ を $\Rn$ の開集合とする.
+</p>
+
+<section class="subsection">
+<h3>$\Coo$ 関数の和, 積, 商</h3>
+
+<div class="proposition">
+$F$, $G \in \Coo(U)$ に対して, 以下が成り立つ.
+
+<ol class="parenthesis-arabic">
+  <li>$F + G \in \Coo(U)$.</li>
+  <li>$FG \in \Coo(U)$.</li>
+  <li>$G(p) \ne 0$ ($\all p \in U$) であれば, $F/G \in \Coo(U)$.</li>
+</ol>
+</div>
+
+<div class="proof">
+<p>
+(1) $U$ 上の連続関数の族 $\cF$ を
+
+$$
+\cF := \set{F + G}{F,\, G \in \Coo(U)}
+$$
+
+で定めれば, $\cF$ は偏微分について閉じている. 
+</p>
+
+<p>
+(2) $U$ 上の連続関数の族 $\cF$ を
+
+$$
+\cF := \set{\sum_{k=1}^N F_k G_k}{F_k,\, G_k \in \Coo(U),\, N \ge 1}
+$$
+
+で定めれば, $\cF$ は偏微分について閉じている. 
+</p>
+
+<p>
+(3) $U$ 上の連続関数の族 $\cF$ を
+
+$$
+\cF := \set{\frac{F}{G}}{F,\, G \in \Coo(U),\, G(p) \ne 0 \; (\all p \in U)}
+$$
+
+で定めれば, (1) と (2) により, $\cF$ は偏微分について閉じている. 
+</p>
+</div>
+</section>
+
+<section>
+<h3>$\Coo$ 関数の合成</h3>
+
+<p>
+以下, 整数 $N \ge 1$ を固定し, $D$ を $\RN$ の開集合とする.
+</p>
+
+<div class="proposition">
+$1$ つの $U$ 上の関数
+
+$$
+F  \cln U \to \R
+$$
+
+と $n$ 個の $D$ 上の関数
+$$
+\ph_1,\, \ld,\, \ph_n  \cln D \to \R
+$$
+
+に対して, 合成関数
+
+$$
+F(\ph_1,\, \ld,\, \ph_n)
+$$
+
+が $D$ 上で定義されるとする：
+
+$$
+( \ph_1(p),\, \ld,\, \ph_n(p) ) \in U \quad (\all p \in D).
+$$
+
+このとき, $F \in \Coo(U)$ かつ $\ph_1$, $\ld$, $\ph_n \in \Coo(D)$ であれば,
+
+$$
+F(\ph_1,\, \ld,\, \ph_n) \in \Coo(D)
+$$
+
+である.
+</div>
+
+<div class="proof">
+<div class="paragraph">
+$D$ 上の連続関数の族 $\cF$ を
+
+$$
+\cF := \set{\sum_{k=1}^N F_k(\ph_1,\, \ld,\, \ph_n) \, \ps_k}{F_k \in \Coo(U),\, \ps_k \in \Coo(D),\, N \ge 1}
+$$
+
+で定める.
+
+<ol class="parenthesis-roman">
+<li>$\cF$ が偏微分について閉じており,</li>
+<li>$F(\ph_1,\, \ld,\, \ph_n) \in \cF$ である,</li>
+</ol>
+
+ことを示せばよい.
+</div>
+
+<p>
+(i) 合成関数の微分公式より従う.
+</p>
+
+<p>
+(ii) $D$ 上で値 $1$ をとる定値関数が, $D$ 上 $\Coo$ であることより従う.
+</p>
+</div>
+
+<p>
+写像 $\ph = (\ph_1,\, \ld,\, \ph_n) \cln D \to U$ が $\Coo$ であるとは, 
+その各成分 $\ph_1$, $\ld$, $\ph_n \cln D \to \R$ が $\Coo$ であることである.
+この定義のもと, 上の命題は次のように言い換えられる.
+</p>
+
+<div class="proposition">
+$U$ 上の $\Coo$ 関数
+
+$$
+F \cln U \to \R
+$$
+
+と $D$ 上の $\Coo$ 写像
+
+$$
+\ph \cln D \to U
+$$
+
+の合成
+
+$$
+F \cc \ph \cln D \uto{\ph} U \uto{F} \R
+$$
+
+は, $D$ 上 $\Coo$ である.
+</div>
+</section>
+
+</section> <!-- end section -->
+
+</main>
+
+</body>
+
+</html>

@@ -8,6 +8,10 @@ html {
     font-size: 24px;
 }
 
+body {
+    font-family: sans-serif;
+}
+
 /* header */
 
 header {
@@ -91,8 +95,13 @@ main h3 {
 
 /* 段落 */
 
-main p {
+main p, main div.paragraph {
     margin: 2rem 0;
+}
+
+/* 例の項目 */
+main div.example {
+    margin-bottom: 3rem;
 }
 
 /* リスト */
@@ -103,7 +112,7 @@ main ol li {
 
 /* 括弧付きリスト */
 
-main ol.parenthesis {
+main ol.parenthesis-arabic {
     counter-reset: number;
     list-style: none;
     margin-left: 0;
@@ -111,9 +120,21 @@ main ol.parenthesis {
     padding-left: 1.6em;
 }
 
-main ol.parenthesis li:before {
+main ol.parenthesis-arabic li:before {
     counter-increment: number;
     content: "(" counter(number) ") ";
+}
+
+main ol.parenthesis-roman {
+    counter-reset: number;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+main ol.parenthesis-roman li:before {
+    counter-increment: number;
+    content: "(" counter(number, lower-roman) ") ";
 }
 
 /* 図 */
@@ -166,16 +187,16 @@ main .definition, main .proposition {
 }
 
 /* 証明 */
-
+/*
 main .proof {
     margin-bottom: 3rem;
-}
+}*/
 
-main .proof p:first-child {
+main .proof p:first-child, main .proof div.paragraph:first-child {
     margin-top: 1rem;
 }
 
-main .proof p:last-child {
+main .proof p:last-child, main .proof div.paragraph:last-child {
     margin-bottom: 1rem;
 }
 
