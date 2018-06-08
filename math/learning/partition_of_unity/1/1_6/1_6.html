@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>1.6 コンパクト台をもつ C^∞ 関数</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>1.6 コンパクト台をもつ $\Coo$ 関数</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$1.6$　コンパクト台をもつ $\Coo$ 関数</h2>
+
+<section>
+<h3>指数関数の増大度</h3>
+
+<p>
+指数関数 $e^x$ の $x \to \oo$ のときの増大度は, 任意の多項式関数関数よりも大きい：
+任意の $n \ge 0$ に対して,
+
+$$
+\lim_{x \to \oo} \frac{e^x}{x^n} = \oo,
+$$
+
+あるいは,
+
+$$
+\lim_{x \to \oo} \frac{x^n}{e^x} = 0.
+$$
+
+$x$ の代わりに $1/x$ を用いると,
+
+$$
+\lim_{x \to +0} \rec{x^n} e^{-\rec{x}} = 0
+$$
+
+となる.
+</p>
+</section>
+
+<section>
+<h3>$\R$ 上の人工的 $\Coo$ 関数 （１）</h3>
+
+<p>
+整数 $n \ge 0$ に対して, $\R$ 上の関数 $E_n$ を,
+
+$$
+E_n(x) :=
+\bcs
+\rec{x^n} e^{-\rec{x}} & (x > 0) \\
+0                      & (x \le 0)
+\ecs
+$$
+
+により定義する.
+</p>
+
+<div class="proposition">
+任意の $n \ge 0$ に対して, $E_n \in \Coo(\R)$ である.
+</div>
+
+<div class="proof">
+<p>
+$\R$ 上の連続関数の族 $\cF$ を
+
+$$
+\cF := \set{\sum_{n=0}^N a_n E_n}{a_n \in \R, \, N \ge 0}
+$$
+
+により定義する.
+$\cF$ が微分に関して閉じていることを示せばよいが, そのためには, 
+任意の $n \ge 0$ に対して, （$E_n$ が微分可能で） $E'_n \in \cF$ であることを示せばよい.
+$n \ge 0$ を固定し, $E_n$ の微分を３つの場合に分けて計算する.
+</p>
+
+<p>
+(i) $x > 0$ のとき：
+
+$$
+E'_n(x) = \frac{-n}{x^{n+1}} e^{-\rec{x}} + \rec{x^{n+2}} e^{-\rec{x}} = -n E_{n+1}(x) + E_{n+2}(x).
+$$
+</p>
+
+<p>
+(ii) $x < 0$ のとき：
+
+$E'(x) = 0$.
+</p>
+
+<p>
+(iii) $x = 0$ のとき：
+
+\begin{align*}
+&\lim_{x \to +0} \frac{E_n(x) - E_n(0)}{x - 0} = \lim_{x \to +0} \frac{E_n(x)}{x} =  \lim_{x \to +0} \rec{x^{n+1}} e^{-\rec{x}} = 0, \\
+&\lim_{x \to -0} \frac{E_n(x) - E_n(0)}{x - 0} = \lim_{x \to -0} \frac{E_n(x)}{x} =  0,
+\end{align*}
+
+
+より,
+
+$E'(0) = 0$.
+</p>
+
+<p>
+(i), (ii), (iii) から,
+
+$$
+E'_n = -n E_{n+1} + E_{n+2}
+$$
+
+が分かる.
+したがって, $E'_n \in \cF$ である.
+</p>
+</div>
+
+<p>
+以下, $E_0$ を $E$ と書く.
+</p>
+</section>
+
+<section>
+<h3>$\R$ 上の人工的 $\Coo$ 関数 （２）</h3>
+
+<p>
+任意の $\e > 0$ に対して, $\R$ 上の関数 $\D_{\e}$ を
+
+$$
+\D_{\e}(x) := E(x + \e) E(-x + \e) \quad (x \in \R)
+$$
+
+により定義する.
+</p>
+
+<figure>
+<img src = fig_1.png></img>
+<figcaption>$E(x)$ のグラフ</figcaption>
+</figure>
+
+<figure>
+<img src = fig_2.png></img>
+<figcaption>$\D_{\e}(x)$ のグラフ</figcaption>
+</figure>
+
+<div class="paragraph">
+$\D_{\e}$ は次の性質をもつ.
+
+<ol class="parenthesis-arabic">
+<li>$\D_{\e} \in \Coo(\R)$.</li>
+<li>$|x| \ge \e \imp \D_{\e}(x) = 0$.</li>
+<li>$|x| < \e \imp \D_{\e}(x) > 0$.</li>
+</ol>
+</div>
+</section>
+
+<section>
+<h3>$\Rn$ 上のコンパクト台をもつ $\Coo$ 関数</h3>
+
+<p>
+位相空間 $X$ 上の関数 $F$ に対して,
+
+$$
+\supp F := \ol{NZ(F)}, \quad NZ(F) := \set{x \in X}{F(x) \ne 0}
+$$
+
+とおき, これを関数 $F$ の<strong>台</strong>と呼ぶ.
+言葉で言えば, $F$ の台とは, $F$ が非零となる点全体の閉包である.
+台の補集合は開であり, その上で $F$ は恒等的に $0$ である.
+</p>
+
+<p>
+以下, 整数 $n \ge 1$ を固定する.
+$x = (x^1, \, \ld, \, x^n) \in \Rn$ に対して,
+
+$$
+\nm{x} := \sqrt{(x^1)^2 + \cd + (x^n)^2}
+$$
+
+とおき, $\e > 0$ と $p \in \Rn$ に対して,
+
+$$
+B_{\e}(p) := \set{x \in \Rn}{\nm{x - p} < \e}
+$$
+
+とおく.
+</p>
+
+<div class="proposition">
+$U$ を $\Rn$ の開集合とし, $p \in U$ とする.
+このとき, $U$ 内にコンパクト台（すなわち, 有界な台）をもち, $p$ で正値をとる $\Rn$ 上の $\Coo$ 非負関数が存在する.
+</div>
+
+<div class="proof">
+<p>
+ある $\e > 0$ が存在して,
+
+$$
+\ol{B_{\e}(p)} \ss U
+$$
+
+となる.
+$\Rn$ 上の関数 $F$ を
+
+$$
+F(x) := \D_{\e^2} \par{ \nm{x - p}^2 } \quad (x \in \Rn)
+$$
+
+で定義する.
+$\D_{\e^2}$ は非負なので, $F$ も非負である.
+</p>
+
+<p>
+(i) $\Coo$ 関数の合成であるので, $F \in \Coo(\Rn)$ である.
+</p>
+
+<p>
+(ii) $\nm{x - p} \ge \e$ であれば, $\nm{x - p}^2 \ge \e^2$ であるので,
+
+$$
+F(x) = \D_{\e^2} \par{ \nm{x - p}^2 } = 0.
+$$
+
+したがって,
+
+$$
+\supp F \ss \ol{B_{\e}(p)} \ss U.
+$$
+
+$\supp F$ は有界閉集合であるから, コンパクトである.
+</p>
+
+<p>
+(iii) $\nm{x - p} < \e$ であれば, $\nm{x - p}^2 < \e^2$ であるので, 
+
+$$
+F(x) = \D_{\e^2} \par{ \nm{x - p}^2 } > 0.
+$$
+
+特に, $F(p) > 0$ である.
+</p>
+</div>
+</section>
+
+</section> <!-- end section -->
+
+</main>
+
+</body>
+
+</html>

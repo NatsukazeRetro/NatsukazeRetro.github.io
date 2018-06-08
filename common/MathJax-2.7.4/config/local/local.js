@@ -37,8 +37,10 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 
   // ギリシャ文字
   TEX.Macro("a","\\alpha");
+  TEX.Macro("e","\\varepsilon");
   TEX.Macro("ph","\\varphi");
   TEX.Macro("ps","\\psi");
+  TEX.Macro("D","\\Delta");
 
   // 黒板文字
   TEX.Macro("C","\\mathbb{C}");
@@ -56,23 +58,24 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("par","\\left( #1 \\right)", 1);
   TEX.Macro("br","\\left\\{ #1 \\right\\}", 1);
 
+  // オーバーライン, アンダーライン
+  TEX.Macro("ol","\\overline{#1}", 1);
+
   // ドット
   TEX.Macro("c","\\cdot");
   TEX.Macro("cd","\\cdots");
   TEX.Macro("ld","\\ldots");
   TEX.Macro("vd","\\vdots");
 
-  // 矢印
+  // 写像記号
   TEX.Macro("uto","\\overset{#1}{\\longrightarrow}", 1);
+  TEX.Macro("cln","\\, \\colon \\,");
 
   // 集合記号
   TEX.Macro("Cup","\\bigcup");
   TEX.Macro("Qup","\\bigsqcup");
   TEX.Macro("ss","\\subset");
   TEX.Macro("set","\\left\\{ #1 \\; \\middle| \\; #2 \\right\\}", 2);
-
-  // 写像記号
-  TEX.Macro("cln","\\, \\colon \\,");
 
   // 論理記号
   TEX.Macro("imp","\\, \\Rightarrow \\,");
@@ -81,8 +84,10 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 
   // いろいろな記号
   TEX.Macro("cc","\\circ");
+  TEX.Macro("nm","\\left\\| #1 \\right\\|", 1);
   TEX.Macro("oo","\\infty");
   TEX.Macro("rd","\\partial");
+  TEX.Macro("supp","\\mathop{\\rm supp}");
 
   // 自作記号
   TEX.Macro("Coo","C^{\\infty}");
