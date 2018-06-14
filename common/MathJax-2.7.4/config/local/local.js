@@ -37,6 +37,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 
   // ギリシャ文字
   TEX.Macro("a","\\alpha");
+  TEX.Macro("b","\\beta");
   TEX.Macro("e","\\varepsilon");
   TEX.Macro("t","\\tau");
   TEX.Macro("ph","\\varphi");
