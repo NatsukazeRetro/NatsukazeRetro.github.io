@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>2.1 C^∞ 関数あるいは滑らかな関数</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>2.1 $\Coo$ 関数あるいは滑らかな関数</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<h1>
+第 $2$ 章<br>
+多様体上の $\Coo$ 関数あるいは滑らかな関数
+</h1>
+
+<section class="section">
+<h2>$2.1$　$\Coo$ 関数あるいは滑らかな関数</h2>
+
+<p>
+以下, 整数 $n \ge 1$ を固定し, $M$ を $n$ 次元 $\Coo$ 多様体とする.
+</p>
+
+<section class="subsection">
+<h3>定義</h3>
+
+<div class="definition">
+$M$ 上の関数 $f$ が <strong>$M$ 上 $\Coo$</strong> である, あるいは, 
+<strong>$M$ 上滑らか</strong>であるとは, 
+$M$ の任意の座標近傍 $(U,\, \ph)$ に対して, $f$ の座標表示 
+
+$$
+f \cc \phinv
+$$
+
+が $\ph(U)$ 上 $\Coo$ であることである. 
+</div>
+
+<p>
+"$M$ 上 $\Coo$" と言う代わりに, 定義域を省略して, 単に "$\Coo$" と言うこともある.
+$M$ 上の $\Coo$ 関数全体は, $\Coo(M)$ と書かれる.
+</p>
+
+<p>
+実際には, $M$ 上の関数が $\Coo$ であることを示すのに, $M$ のすべての座標近傍について確かめる必要はない.
+</p>
+
+<div class="proposition">
+$f$ を $M$ 上の関数とし, $\br{(U_{\a},\, \ph_{\a})}_{\a \in A}$ を座標近傍による $M$ の被覆とする.
+任意の $\a \in A$ に対して, $f$ の座標表示 
+
+$$
+f \cc \phinv_{\a}
+$$ 
+
+が $\ph(U_{\a})$ 上 $\Coo$ であれば, $f \in \Coo(M)$ である.
+</div>
+
+<p>
+証明の前に補題を述べる.
+</p>
+
+<div class="proposition">
+$f$ を $M$ 上の関数とし, $(U, \, \ph)$ を $M$ の座標近傍とするとき, 次の (1) から (3) が成り立つ.
+
+<ol class="parenthesis-arabic">
+  <li>
+    $U = \Cup_{\a \in A} V_{\a}$ を $U$ の開被覆とする.
+    このとき,
+    \begin{align*}
+    &\text{任意の $\a \in A$ に対して, $f$ の $\ph|_{V_{\a}}$ による座標表示が $\Coo$} \\[0.5em]
+    &\!\! \imp \text{$f$ の $\ph$ による座標表示も $\Coo$}
+    \end{align*}
+  </li>
+  <li>
+    $\ps$ を $U$ 上のもう $1$ つの局所座標系とする.
+    このとき,
+    $$
+    \text{$f$ の $\ps$ による座標表示が $\Coo$} 
+    \imp \text{$f$ の $\ph$ による座標表示も $\Coo$}
+    $$
+  </li>
+  <li>
+    $\br{(V_{\a}, \, \ps_{\a})}_{\a \in A}$ を $U$ 内の座標近傍による $U$ の被覆とする.
+    このとき,
+    \begin{align*}
+    &\text{任意の $\a \in A$ に対して, $f$ の $\ps_{\a}$ による座標表示が $\Coo$} \\[0.5em]
+    &\!\! \imp \text{$f$ の $\ph$ による座標表示も $\Coo$}
+    \end{align*}
+  </li>
+</ol>
+</div>
+
+<div class="proof">
+<p>
+(1) 条件を言い換えると,
+
+$$
+\text{$f \cc \phinv$ は各 $\ph(V_{\a})$ 上で $\Coo$}
+$$
+
+となる.
+$\br{\ph(V_{\a})}_{\a \in A}$ は $\ph(U)$ を被覆するので, $f \cc \phinv$ は $U$ 上
+</p>
+
+<p>
+$(U, \ph)$ を $M$ の任意の座標近傍とする.
+$f$ の座標表示 $f \cc \phinv$ が $\Coo$ であることを示せばよい.
+</p>
+
+<div class="paragraph">
+$\a \in A$ とし, $V_{\a} := U \cap U_{\a}$ 上の $2$ つの局所座標 $\ph$, $\ph_{\a}$ の間の座標変換を $\t_{\a}$ とする.
+
+<p>
+図
+</p>
+
+<figure>
+<img src = fig1.png></img>
+</figure>
+
+このとき, 図式
+
+<p>
+図式
+</p>
+
+<figure>
+<img src = fig2.png></img>
+<figcaption>$E(x)$ のグラフ</figcaption>
+</figure>
+
+は可換である.
+仮定より, $f \cc \phinv$ は $\ph_{\a}(U_{\a})$ 上, したがって, $\ph_{\a}(V_{\a})$ 上で $\Coo$ である.
+また, 座標変換 $\t_{\a}$ も $\Coo$ であるので, $\Coo$ 関数の合成である $\ph(V_{\a})$ 上の $f \cc \phinv$ も $\Coo$ である.
+</div>
+
+<p>
+$\br{\ph(V_{\a}) \ss \ph(U)}_{\a \in A}$ は $\ph(U)$ を被覆するので, $f \cc \phinv$ は $\ph(U)$ 上でも $\Coo$ である. 
+</p>
+</div>
+</section> <!-- end of subsection -->
+
+<section class="subsection">
+<h3>例</h3>
+
+<p>
+$M$ 上の定数関数が $\Coo$ であることは, 定義からすぐに分かる.
+</p>
+</section> <!-- end of subsection -->
+
+<section class="subsection">
+<h3>連続性</h3>
+
+<p>
+$M$ 上の $\Coo$ 関数は, $M$ の任意の座標近傍上で連続であるので, $M$ 上でも連続である.
+</p>
+</section> <!-- end of subsection -->
+
+<section class="subsection">
+<h3>開集合への制限</h3>
+
+<p>
+$f$ を $M$ 上の関数とし, $U$ を $M$ の開集合とする.
+$f$ が <strong>$U$ 上 $\Coo$</strong> であるとは, 
+開部分多様体 $U$ 上の関数 $f|_U$ が $U$ 上 $\Coo$ であることである.
+</p>
+
+<div class="paragraph">
+開部分多様体 $U$ の座標近傍とは, すなわち, $U$ に含まれる $M$ の座標近傍に他ならないので, これは, 
+
+<blockquote>
+$U$ に含まれる $M$ の任意の座標近傍 $(V, \ps)$ に対して, 
+$f$ の座標表示 $f \cc \psinv$ が $\ps(V)$ 上 $\Coo$ である
+</blockquote>
+
+ことと同値である.
+</div>
+
+<p>
+この言い換えから, 次は自明である.
+</p>
+
+<div class="proposition">
+$f$ を $M$ 上の関数とし, $U$ を $M$ の開集合とする. 
+$f$ が $M$ 上 $\Coo$ であれば, $f$ は $U$ 上でも $\Coo$ である.
+</div>
+
+</section> <!-- end of subsection -->
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>

@@ -38,6 +38,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   // ギリシャ文字
   TEX.Macro("a","\\alpha");
   TEX.Macro("e","\\varepsilon");
+  TEX.Macro("t","\\tau");
   TEX.Macro("ph","\\varphi");
   TEX.Macro("ps","\\psi");
   TEX.Macro("D","\\Delta");
@@ -88,6 +89,10 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("oo","\\infty");
   TEX.Macro("rd","\\partial");
   TEX.Macro("supp","\\mathop{\\rm supp}");
+
+  // 逆数
+  TEX.Macro("phinv","\\varphi^{-1}");
+  TEX.Macro("psinv","\\psi^{-1}");
 
   // 自作記号
   TEX.Macro("Coo","C^{\\infty}");

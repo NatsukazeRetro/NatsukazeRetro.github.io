@@ -1,0 +1,119 @@
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+var w = canvas.width = 600;
+var h = canvas.height = 300;
+
+canvas.style.border = '1px solid black';
+
+// 原点と座標軸
+var origin = {x: w/2, y: h/2};
+ctx.translate(origin.x, origin.y);
+ctx.scale(1, -1);
+
+/*
+// 円の中心
+var c = [];
+c[0] = {x: -180, y: 0};
+c[1] = {x: -100, y: 0};
+c[2] = {x: 200, y: 0};
+
+// 円の半径
+r = 65;
+
+// 円の描画
+ctx.lineWidth = 3;
+ctx.strokeStyle = 'tomato';
+
+for (var i = 0; i < c.length; i++) {
+    if (i == 1) ctx.strokeStyle = '#45B11A';
+    ctx.beginPath();
+    ctx.arc(c[i].x, c[i].y, r, 0, 2*Math.PI, false);
+    ctx.stroke();
+}
+
+// 矢印
+var offset = 30;
+var arrow_start = {x: c[1].x + r + offset, y: 0};
+var arrow_end = {x: c[2].x - r - offset, y: 0};
+var arrow_ang = 30;
+var arrow_len = 10;
+
+ctx.lineWidth = 3;
+//ctx.strokeStyle = '#92551D';
+
+draw_arrow(ctx, arrow_start, arrow_end, arrow_ang, arrow_len);
+*/
+
+/*
+// 円の中心
+var c = [];
+c[0] = {x: -40, y: 120};
+c[1] = {x: 40, y: 120};
+c[2] = {x: -135, y: -120};
+c[3] = {x: 135, y: -120};
+
+// 円の半径
+r = 65;
+
+// 円の描画
+ctx.lineWidth = 3;
+ctx.strokeStyle = '#45B11A';
+
+for (var i = 0; i < 4; i++) {
+    ctx.beginPath();
+    ctx.arc(c[i].x, c[i].y, r, 0, 2*Math.PI, false);
+    ctx.stroke();
+}
+*/
+
+// ストライプの描画
+ctx.lineWidth = 3;
+ctx.strokeStyle = '#92551D';
+
+var step = 10;
+var x1 = - w/2, x2 = w/2 + h;
+var y1 = h/2, y2 = - h/2;
+
+ctx.beginPath();
+for (var x = x1; x <= x2; x += step) {
+    ctx.moveTo(x, y1);
+    ctx.lineTo(x - h, y2);
+}
+ctx.stroke();
+
+// 矢印描画関数
+function draw_arrow(ctx, start, end, ang, len) {
+    // 終点から始点へ向けた長さ len のベクトル
+    var vec = {x: start.x - end.x, y: start.y - end.y};
+    var vecLen = Math.sqrt(vec.x**2 + vec.y**2);
+    vec.x *= len/vecLen;
+    vec.y *= len/vecLen;
+
+    // ラジアンへ変換
+    ang *= Math.PI / 180;
+
+    ctx.beginPath();
+
+    ctx.moveTo(start.x, start.y);
+    ctx.lineTo(end.x, end.y);
+
+    ctx.save();
+    ctx.translate(end.x, end.y);
+
+    ctx.save();
+    ctx.rotate(ang);
+    ctx.moveTo(0, 0);
+    ctx.lineTo(vec.x, vec.y);
+    ctx.restore();
+
+    ctx.save();
+    ctx.rotate(-ang);
+    ctx.moveTo(0, 0);
+    ctx.lineTo(vec.x, vec.y);
+    ctx.restore();
+
+    ctx.restore();
+
+    ctx.stroke();
+}

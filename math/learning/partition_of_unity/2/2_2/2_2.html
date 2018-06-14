@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>2.2 C^∞ 関数の和, 積, 商</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>2.2 $\Coo$ 関数の和, 積, 商</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$2.2$　$\Coo$ 関数の和, 積, 商</h2>
+
+<p>
+以下, 整数 $n \ge 1$ を固定し, $M$ を $n$ 次元 $\cloo$ 多様体とする.
+</p>
+
+<div class="proposition">
+<p>
+$f$, $g \in \cloo(M)$ に対して, 以下が成り立つ.
+</p>
+
+<ol class="parenthesis-arabic">
+  <li>(1) $f + g \in \cloo(M)$.</li>
+  <li>(2) $fg \in \cloo(M)$.</li>
+  <li>(3) $g(p) \ne 0$ $(\forall p \in M)$ ならば, $f/g \in \cloo(M)$.</li>
+</ol>
+</div>
+
+<div class="proof">
+<p>
+(1) $\ph$ を $M$ の局所座標系とする.
+このとき, $f$, $g$ の座標表示
+
+$$
+f \cc \phinv, \quad g \cc \phinv
+$$
+
+は $\cloo$ であるので, それらの和
+
+$$
+f \cc \phinv + g \cc \phinv = (f + g) \cc \phinv
+$$
+
+も $\cloo$ である.
+したがって, $f + g \in \cloo(M)$ である. 
+</p>
+
+<p>
+(2), (3) (1) と同様である. 
+</p>
+<div>
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>

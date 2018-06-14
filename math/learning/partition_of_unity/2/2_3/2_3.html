@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>2.3 C^∞ 関数と開被覆</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>2.3 $\Coo$ 関数と開被覆</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$2.3$　$\Coo$ 関数と開被覆</h2>
+
+<p>
+以下, 整数 $n \ge 1$ を固定し, $M$ を $n$ 次元 $\cloo$ 多様体とする.
+</p>
+
+<div class="proposition">
+> $f$ を $M$ 上の関数とし, $\br{U_{\l}}_{\l \in \L}$ を $M$ の開被覆とする.
+> 任意の $\l \in \L$ に対して, $f$ が $U_{\l}$ 上で $\cloo$ であれば, $f$ は $M$ 上でも $\cloo$ である.
+</div>
+
+<div class="proof">
+各 $U_{\l}$ は $M$ の座標近傍の和として書けるので, $M$ の座標近傍による $M$ の被覆 $\br{(V_{\a}, \ps_{\a})}_{\a \in A}$ で, 各 $V_{\a}$ がある $U_{\l}$ に含まれるようなものが存在する.
+
+各 $\a \in A$ に対して, $f$ の座標表示 $f \cc \psinv_{\a}$ が $\cloo$ であることを示せばよいが, 座標近傍 $(V_{\a}, \ps_{\a})$ はある $U_{\l}$ に含まれ, $f$ は $U_{\l}$ 上で $\cloo$ であるので,
+
+$$
+f \cc \psinv_{\a}
+$$
+
+は $\cloo$ である. 
+</div>
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>
