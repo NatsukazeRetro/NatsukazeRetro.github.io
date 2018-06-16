@@ -56,21 +56,21 @@
 <h3>定義</h3>
 
 <div class="definition">
-> $\br{S_i}_{i \in I}$ が**局所有限**であるとは, $X$ の任意の点に対してその開近傍 $U$ が存在し,
->
+$\br{S_i}_{i \in I}$ が<strong>局所有限</strong>であるとは, 
+$X$ の任意の点に対してその開近傍 $U$ が存在し,
+
 $$
-U \cap S_i = \emset
+U \cap S_i \ne \emset
 $$
->
-> をみたす $i \in I$ が有限個しか存在しないことである.
+
+をみたす $i \in I$ が有限個しか存在しないことである.
 </div>
 
 <p>
-任意の点の周りに開近傍 $U$ がとれて, そこではほとんどの $S_i$ が空となり, $\br{S_i}_{i \in I}$ が実質有限族になるというわけである.
-</p>
-
-<p>
-このとき, 特に, 各点 $p \in X$ に対して, $p \in S_i$ となるような $i \in I$ は有限個である.
+任意の点 $p$ の周りに開近傍 $U$ がとれて, 
+そこではほとんどの $S_i$ が空となり, $\br{S_i}_{i \in I}$ が実質有限族になるというわけである.
+このとき, $U$ と交わらない $S_i$ は $p$ を含まないので, $p \in S_i$ をみたす $i \in I$ も有限個である.
+<!--このとき, 特に, 各点 $p \in X$ に対して, $p \in S_i$ となるような $i \in I$ は有限個である.-->
 </p>
 
 <p>
@@ -78,13 +78,13 @@ $$
 </p>
 
 <div class="proposition">
-> $\br{S'_i}_{i \in I}$ を
->
+$X$ の部分集合族 $\br{S'_i}_{i \in I}$ は
+
 $$
 S'_i \ss S_i \quad (\all i \in I)
 $$
-> である $X$ の部分集合族とする.
-> $\br{S_i}_{i \in I}$ が局所有限であれば, $\br{S'_i}_{i \in I}$ も局所有限である.
+をみたすとする.
+$\br{S_i}_{i \in I}$ が局所有限であれば, $\br{S'_i}_{i \in I}$ も局所有限である.
 </div>
 </section> <!-- end of subsection -->
 
@@ -101,7 +101,7 @@ $$
     $$
 
     をみたす $j \in I$ が有限個しかないとき, 
-    部分集合族 $\br{S_i}_{i \in I}$ は**自己交叉有限**であるという.
+    部分集合族 $\br{S_i}_{i \in I}$ は<strong>自己交叉有限</strong>であるという.
     自己交叉有限な $X$ の開被覆は局所有限である.
   </li>
 </ol>
@@ -111,17 +111,29 @@ $$
 <h3>添字集合の分割</h3>
 
 <div class="proposition">
-> $I = \Qup_{\l \in \L} I_{\l}$ を添字集合 $I$ の直和分割とするとき, 次の (1) と (2) は同値である.
->
-> (1) $\br{S_i}_{i \in I}$ は局所有限である.
->
-> (2) (i) 任意の $\l \in \L$ に対して $\br{S_i}_{i \in I_{\l}}$ は局所有限であり,   
-> (ii) $\br{T_{\l} := \Cup_{i \in I_{\l}} S_i}$ も局所有限である.
+$I = \Qup_{\l \in \L} I_{\l}$ を添字集合 $I$ の直和分割とするとき, 次の (1) と (2) は同値である.
+
+<ol class="parenthesis-arabic">
+  <li>$\br{S_i}_{i \in I}$ は局所有限である.</li>
+  <li>
+    <ol class="parenthesis-roman" style="display: inline-block; vertical-align: top; text-indent: 0;">
+      <li>任意の $\l \in \L$ に対して $\br{S_i}_{i \in I_{\l}}$ は局所有限であり,</li>
+      <li> $\br{T_{\l} := \Cup_{i \in I_{\l}} S_i}_{\l \in \L}$ も局所有限である.</li>
+    </ol>
+  </li>
+</ol>
 </div>
 
 <div class="proof">
-$\imp)$ (i) 明らか.
+<p>
+$\imp)$ 
+</p>
 
+<p>
+(i) 明らか.
+</p>
+
+<p>
 (ii) $p \in X$ とする. 
 $\br{S_i}_{i \in I}$ は局所有限であるので, $p$ の開近傍 $U$ で,
 
@@ -130,20 +142,20 @@ U \cap S_i \ne \emset
 $$
 
 をみたす $i \in I$ が有限個となるようなものがとれる.
-この条件をみたす $i \in I$ を $i_1$, $\ld$, $i_m$ とする：
+それらの $i \in I$ を $i_1$, $\ld$, $i_m$ とする：
 
 $$
 U \cap S_i
 \bcs
-\ne \emset & (i = i_1, \ld, i_m), \\
-= \emset & (i \ne i_1, \ld, i_m).
+\ne \emset & (i = i_1, \, \ld, \, i_m), \\
+= \emset & (i \ne i_1, \, \ld, \, i_m).
 \ecs
 $$
 
 有限個の $\l \in \L$ を除いて, $I_{\l}$ は $i_1$, $\ld$, $i_m$ のいずれも含まない：
 
 $$
-i_1, \ld, i_m \not\in I_{\l}.
+i_1, \, \ld, \, i_m \not\in I_{\l}.
 $$
 
 このような $\l \in \L$ に対しては,
@@ -159,8 +171,14 @@ U \cap T_{\l} = U \cap \par{\Cup_{i \in I_{\l}} S_i} = \Cup_{i \in I_{\l}} \par{
 $$
 
 であるので, 部分集合族 $\br{T_{\l}}_{\l \in \L}$ は局所有限である.
+</p>
 
-$\impL)$ (a) $p \in X$ とする.
+<p>
+$\impL)$ 
+</p>
+
+<p>
+(A) $p \in X$ とする.
 $\br{T_{\l}}_{\l \in \L}$ は局所有限であるので, $p$ の開近傍 $U$ で,
 
 $$
@@ -168,17 +186,17 @@ U \cap T_{\l} \ne \emset
 $$
 
 をみたす $\l \in \L$ が有限個となるようなものがとれる.
-この条件をみたす $\l \in \L$ を $\l_1$, $\ld$, $\l_m$ とする：
+それらの $\l \in \L$ を $\l_1$, $\ld$, $\l_m$ とする：
 
 $$
 U \cap T_{\l}
 \bcs
-\ne \emset & (\l = \l_1, \ld, \l_m), \\
-= \emset & (\l \ne \l_1, \ld, \l_m).
+\ne \emset & (\l = \l_1, \, \ld, \, \l_m), \\
+= \emset & (\l \ne \l_1, \, \ld, \, \l_m).
 \ecs
 $$
 
-$\l \ne \l_1, \ld, \l_m$ であるとき, 任意の $i \in I_{\l}$ に対して,
+$\l \ne \l_1$, $\ld$, $\l_m$ であるとき, 任意の $i \in I_{\l}$ に対して,
 
 $$
 U \cap S_i \ss U \cap T_{\l} = \emset
@@ -187,42 +205,46 @@ $$
 であるので,
 
 $$
-\l \ne \l_1, \ld, \l_m \imp U \cap S_i = \emset \quad (\all i \in I_{\l})  \tag{$*$}
+\l \ne \l_1, \, \ld, \, \l_m \imp U \cap S_i = \emset \quad (\all i \in I_{\l})  \tag{$*$}
 $$
 
 である.
+</p>
 
-(b) 各 $\l \in \L$ に対して $\br{S_i}_{i \in I_{\l}}$ は局所有限であるので, $p$ の開近傍 $U_{\l}$ で,
+<p>
+(B) 各 $\l \in \L$ に対して $\br{S_i}_{i \in I_{\l}}$ は局所有限であるので, $p$ の開近傍 $U_{\l}$ で,
 
 $$
 U_{\l} \cap S_i \ne \emset
 $$
 
 をみたす $i \in I_{\l}$ が有限個となるようなものがとれる.
+</p>
 
-(c) $X$ の部分集合 $V$ を
+<p>
+(C) $X$ の部分集合 $V$ を
 
 $$
 V := U \cap U_{\l_1} \cap \cd \cap U_{\l_m}
 $$
 
 で定義すると, $V$ は $p$ の開近傍である.
+</p>
 
-(d) $V \ss U$ であるから, ($*$) より, 
+<p>
+(D) $V \ss U$ であるから, ($*$) より, 
 
 $$
-\l \ne \l_1, \ld, \l_m  \imp  V \cap S_i = \emset  \quad  (\all i \in I_{\l})
+\l \ne \l_1, \, \ld, \, \l_m  \imp  V \cap S_i = \emset  \quad  (\all i \in I_{\l})
 $$
 
 であり, それ故,
 
-$$
-\bal
+\begin{align*}
 \set{i \in I}{V \cap S_i \ne \emset} &= \Qup_{\l \in \L} \set{i \in I_{\l}}{V \cap S_i \ne \emset} \\
-&= \Qup_{\l = \l_1, \ld, \l_m} \set{i \in I_{\l}}{V \cap S_i \ne \emset} \\
-&\ss \Qup_{\l = \l_1, \ld, \l_m} \set{i \in I_{\l}}{U_{\l} \cap S_i \ne \emset}
-\eal
-$$
+&= \Qup_{\l = \l_1, \, \ld, \, \l_m} \set{i \in I_{\l}}{V \cap S_i \ne \emset} \\
+&\ss \Qup_{\l = \l_1, \, \ld, \, \l_m} \set{i \in I_{\l}}{U_{\l} \cap S_i \ne \emset}
+\end{align*}
 
 が成り立つ.
 $U_{\l}$ のとり方により, 集合
@@ -239,6 +261,7 @@ $$
 
 も有限集合である.
 したがって, 部分集合族 $\br{S_i}_{i \in I}$ は局所有限である.
+</p>
 </div>
 
 </section> <!-- end of subsection -->

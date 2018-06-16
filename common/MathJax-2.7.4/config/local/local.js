@@ -39,10 +39,12 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("a","\\alpha");
   TEX.Macro("b","\\beta");
   TEX.Macro("e","\\varepsilon");
+  TEX.Macro("l","\\lambda");
   TEX.Macro("t","\\tau");
   TEX.Macro("ph","\\varphi");
   TEX.Macro("ps","\\psi");
   TEX.Macro("D","\\Delta");
+  TEX.Macro("L","\\Lambda");
 
   // 黒板文字
   TEX.Macro("C","\\mathbb{C}");
@@ -74,6 +76,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("cln","\\, \\colon \\,");
 
   // 集合記号
+  TEX.Macro("emset","\\emptyset");
   TEX.Macro("Cup","\\bigcup");
   TEX.Macro("Qup","\\bigsqcup");
   TEX.Macro("ss","\\subset");
@@ -81,6 +84,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 
   // 論理記号
   TEX.Macro("imp","\\, \\Rightarrow \\,");
+  TEX.Macro("impL","\\, \\Leftarrow \\,");
   TEX.Macro("equ","\\, \\Leftrightarrow \\,");
   TEX.Macro("all","\\forall");
 
