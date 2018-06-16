@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>3.6 C^∞ 関数の局所有限和</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>3.6 $\Coo$ 関数の局所有限和</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$3.6$　$\Coo$ 関数の局所有限和</h2>
+
+<p>
+$n \ge 1$ を整数とし, $M$ を $n$ 次元 $\Coo$ 多様体とする.
+</p>
+
+<div class="proposition">
+> $M$ 上の局所有限な $\Coo$ 関数族 $\br{f_i}_{i \in I}$ に対して, その局所有限和 $f$ は $\Coo$ である.
+</div>
+
+<div class="proof">
+$M$ の任意の点 $p$ に対して, $p$ の開近傍 $U_p$ が存在して,
+
+$$
+U_p \cap \supp f_i \ne \emset
+$$
+
+をみたす $i \in I$ は有限個である.
+それらを $i_1$, $\ld$, $i_m$ とする.
+$q \in U_p$ に対して,
+
+$$
+\bal
+f(q) &= \ssum{i \in I} f_i(q) \\
+&= f_{i_1}(q) + \cd + f_{i_m}(q) \\
+&= (f_{i_1} + \cd + f_{i_m})(q).
+\eal
+$$
+
+$f_{i_1} + \cd + f_{i_m}$ は $U_p$ 上で $\Coo$ であるので, $f$ も $U_p$ 上で $\Coo$ である.
+$\br{U_p}_{p \in M}$ は $M$ を被覆するので, $f$ は $M$ 上で $\Coo$ である. 
+</div>
+
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>

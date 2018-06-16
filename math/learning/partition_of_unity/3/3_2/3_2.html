@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>3.2 局所有限な部分集合族の和の閉包</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>3.2 局所有限な部分集合族の和の閉包</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$3.2$　局所有限な部分集合族の和の閉包</h2>
+
+<p>
+以下, $X$ を位相空間とする.
+</p>
+
+<section class="subsection">
+<h3>一般論</h3>
+
+<p>
+$\br{S_i}_{i \in I}$ が $X$ の部分集合族であるとき,
+
+$$
+\Cup_{i \in I} \ol{S_i} \ss \ol{\Cup_{i \in I} S_i}
+$$
+
+である（バーの長い方が大きい）.
+これは,
+
+$$
+S_i \ss \Cup_{i \in I} S_i \ss \ol{\Cup_{i \in I} S_i}
+$$
+
+より従う.
+</p>
+</section> <!-- end of subsection -->
+
+<section class="subsection">
+<h3>有限族の場合</h3>
+
+<p>
+有限族の場合には等号が成り立つ：
+
+$$
+|I| < \oo  \imp  \Cup_{i \in I} \ol{S_i} = \ol{\Cup_{i \in I} S_i}.
+$$
+
+なぜなら,
+
+$$
+\Cup_{i \in I} \ol{S_i} \sp \Cup_{i \in I} S_i
+$$
+
+であり, 閉集合の有限和である左辺もまた, 閉集合であるからである.
+</p>
+
+<p>
+この事実は, <a href="">局所有限族</a>の場合へと一般化される.
+</p>
+</section> <!-- end of subsection -->
+
+<section class="subsection">
+<h3>局所有限族の場合</h3>
+
+<div class="definition">
+> $X$ の部分集合族 $\br{S_i}_{i \in I}$ が局所有限であれば,
+>
+$$
+\Cup_{i \in I} \ol{S_i} = \ol{\Cup_{i \in I} S_i}
+$$
+>
+> が成り立つ.
+</div>
+
+<div class="proof">
+(a) 片側の包含関係は知られているので, もう一方の包含関係
+
+$$
+\Cup_{i \in I} \ol{S_i} \sp \ol{\Cup_{i \in I} S_i}
+$$
+
+を示せばよい.
+点
+
+$$
+p \in \ol{\Cup_{i \in I} S_i}
+$$
+
+をとる.
+
+(b) 点 $p$ の開近傍 $U$ で,
+
+$$
+U \cap S_i = \emset
+$$
+
+をみたす $i \in I$ が有限個であるようなものをとる.
+また, それら有限個の $i \in I$ を $i_1$, $\ld$, $i_m$ とする：
+
+$$
+U \cap S_i 
+\bcs
+\ne \emset & (i = i_1, \ld, i_m), \\
+= \emset & (i \ne i_1, \ld, i_m).
+\ecs
+$$
+
+$i \ne i_1$, $\ld$, $i_m$ のとき, $S_i \ss U^c$ であるので,
+
+$$
+\Cup_{i \ne i_1, \ld, i_m} S_i \ss U^c
+$$
+
+である.
+$U^c$ は閉集合であるので,
+
+$$
+\ol{\Cup_{i \ne i_1, \ld, i_m} S_i} \ss U^c.
+$$
+
+したがって, 
+
+$$
+p \not\in \ol{\Cup_{i \ne i_1, \ld, i_m} S_i}
+$$
+
+である.
+
+(c) しかし,
+
+$$
+\bal
+p \in \ol{\Cup_{i \in I} S_i} &= \ol{S_{i_1} \cup \cd \cup S_{i_m} \cup \Cup_{i \ne i_1, \ld, i_m} S_i} \\
+&= \ol{S_{i_1}} \cup \cd \cup \ol{S_{i_m}} \cup \ol{\Cup_{i \ne i_1, \ld, i_m} S_i}
+\eal
+$$
+
+であるので,
+
+$$
+p \in \ol{S_{i_1}} \cup \cd \cup \ol{S_{i_m}} \ss \Cup_{i \in I} \ol{S_i}.
+$$
+
+これで, 求める包含関係
+
+$$
+\Cup_{i \in I} \ol{S_i} \sp \ol{\Cup_{i \in I} S_i}
+$$
+
+が示された. 
+</div>
+
+</section> <!-- end of subsection -->
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>3.5 局所有限和の部分和への分解</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>3.5 局所有限和の部分和への分解</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$3.5$　局所有限和の部分和への分割</h2>
+
+<p>
+以下, $X$ を位相空間とする.
+</p>
+
+<p>
+$\br{f_i}_{i \in I}$ を $X$ 上の局所有限な関数族とし, $J \ss I$ とする.
+このとき, 部分族 $\br{f_i}_{i \in J}$ も局所有限であり, その局所有限和を考えることができる.
+</p>
+
+<div class="proposition">
+> $\br{f_i}_{i \in I}$ を $X$ 上の局所有限な関数族とし,
+>
+$$
+I = \Qup_{\l \in \L} I_{\l}
+$$
+>
+> を添字集合 $I$ の直和分割とする.
+> このとき, 次の (1) と (2) が成り立つ.
+>
+> (1) 関数族
+>
+$$
+\br{g_{\l} := \ssum{i \in I_{\l}} f_i}_{\l \in \L}
+$$
+>
+> も局所有限である.
+>
+> (2) $\br{f_i}_{i \in I}$ の局所有限和は, その部分和 $g_{\l}$ ($\l \in \L$) の和である：
+>
+$$
+\ssum{i \in I} f_i = \ssum{\l \in \L} g_{\l}.
+$$
+</div>
+
+<div class="proof">
+(1) 集合族 $\br{\supp f_i}_{i \in I}$ は局所有限であるから, その部分和のなす集合族
+
+$$
+\br{\Cup_{i \in I_{\l}} \supp f_i}_{\l \in \L}
+$$
+
+も局所有限である.
+任意の $\l \in \L$ に対して,
+
+$$
+\supp g_{\l} \ss \Cup_{i \in I_{\l}} \supp f_i
+$$
+
+であるから, 集合族
+
+$$
+\br{\supp g_{\l}}_{\l \in \L}
+$$
+
+も局所有限である.
+
+(2) $p \in X$ とする.
+$\br{f_i}_{i \in I}$ は局所有限であるから,
+
+$$
+f_i(p) \ne 0
+$$
+
+をみたす $i \in I$ は有限個である.
+したがって, 有限個の $\l_1$, $\ld$, $\l_m \in \L$ が存在して,
+
+$$
+\l \ne \l_1, \ld, \l_m \imp f_i(p) = 0 \quad (\all i \in I_{\l})
+$$
+
+となる.
+
+(i) $\l \ne \l_1$, $\ld$, $\l_m$ のとき,
+
+$$
+g_{\l}(p) = \ssum{i \in I_{\l}} f_i(p) = 0
+$$
+
+である.
+
+(ii) また,
+
+$$
+\bal
+\set{i \in I}{f_i(p) \ne 0} &= \Qup_{\l \in \L} \set{i \in I_{\l}}{f_i(p) \ne 0} \\
+&= \Qup_{\l = \l_1, \ld, \l_m} \set{i \in I_{\l}}{f_i(p) \ne 0}
+\eal
+$$
+
+である.
+
+これらより,
+
+$$
+\bal
+\par{\ssum{\l \in \L} g_{\l}}(p) &= \sum_{\substack{\l \in \L \\ g_{\l}(p) \ne 0}} g_{\l}(p) \\
+&\overset{(\rmi)}{=} \sum_{\l = \l_1, \ld, \l_m} g_{\l}(p) \\
+&= \sum_{\l = \l_1, \ld, \l_m} \sum_{\substack{i \in I_{\l} \\ f_i(p) \ne 0}} f_i(p) \\
+&\overset{(\rmii)}{=} \sum_{\substack{i \in I \\ f_i(p) \ne 0}} f_i(p) \\
+&= \par{\ssum{i \in I} f_i}(p)
+\eal
+$$
+
+が成り立つ. 
+</div>
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>

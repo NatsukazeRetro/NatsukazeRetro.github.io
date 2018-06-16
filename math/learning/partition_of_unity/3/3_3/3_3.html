@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>3.3 局所有限和</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>3.3 局所有限和</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$3.3$　局所有限和</h2>
+
+<section class="subsection">
+<h3>実数族の非零和</h3>
+
+<div class="definition">
+> 有限個以外は $0$ である実数の族 $\br{a_i}_{i \in I}$ に対して, その**非零和** $\sum_{i \in I}^* a_i$ を
+>
+$$
+\sideset{}{^*}\sum_{i \in I \phantom{\,*}} a_i := \sum_{\substack{i \in I \\ a_i \ne 0}} a_i
+$$
+>
+> で定義する.
+</div>
+
+<p>
+右辺は, より大きな部分で足してもよい：
+
+$$
+\set{i \in I}{a_i \ne 0} \ss J
+$$
+
+をみたす $I$ の有限部分集合 $J$ に対して,
+
+$$
+\sideset{}{^*}\sum_{i \in I \phantom{\,*}} a_i = \sum_{i \in J} a_i.
+$$
+</p>
+</section> <!-- end of subsection -->
+
+<section class="subsection">
+<h3>局所有限な関数族</h3>
+
+<p>
+以下, $X$ を位相空間とする.
+</p>
+
+<div class="definition">
+> $X$ 上の関数族 $\br{f_i}_{i \in I}$ が**局所有限**であるとは, 各関数の台のなす $X$ の部分集合族 $\br{\supp f_i}_{i \in I}$ が局所有限であることである.
+</div>
+</section> <!-- end of subsection -->
+
+<section class="subsection">
+<h3>局所有限和</h3>
+
+<p>
+$\br{f_i}_{i \in I}$ を $X$ 上の局所有限な関数族とし, $p \in X$ とする.
+このとき,
+
+$$
+p \in \supp f_i
+$$
+
+をみたす $i \in I$ は有限個である.
+有限個の $i \in I$ を除いて
+
+$$
+p \not\in \supp f_i,
+$$
+
+それ故,
+
+$$
+f_i(p) = 0
+$$
+
+であるので, 非零和
+
+$$
+\sideset{}{^*}\sum_{i \in I \phantom{\,*}} f_i(p)
+$$
+
+が定義される.
+</p>
+
+<div class="definition">
+> $X$ 上の局所有限な関数族 $\br{f_i}_{i \in I}$ に対して, その**局所有限和** $\sum_{i \in I}^* f_i$ を
+>
+$$
+\par{\sideset{}{^*}\sum_{i \in I \phantom{\,*}} f_i}(p) := \sideset{}{^*}\sum_{i \in I \phantom{\,*}} f_i(p) \quad (\all p \in X)
+$$
+>
+> で定義する.
+</div>
+</section> <!-- end of subsection -->
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>

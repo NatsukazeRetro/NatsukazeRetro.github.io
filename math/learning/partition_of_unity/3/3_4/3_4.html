@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>3.4 局所有限和の簡単な性質</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>3.4 局所有限和の簡単な性質</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$3.4$　局所有限和の簡単な性質</h2>
+
+<p>
+以下, $X$ を位相空間とする.
+</p>
+
+<section class="subsection">
+<h3>局所有限和の分配法則</h3>
+
+<div class="proposition">
+> $f$ を $X$ 上の関数とし, $\br{g_i}_{i \in I}$ を $X$ 上の関数族とする.
+> $\br{g_i}_{i \in I}$ が局所有限であるとき, 次の (1) と (2) が成り立つ.
+>
+> (1) $\br{f g_i}_{i \in I}$ も局所有限である.
+>
+> (2) $\br{f g_i}_{i \in I}$ の局所有限和は分配法則に従う：
+>
+$$
+\ssum{i \in I} f g_i = f \ssum{i \in I} g_i.
+$$
+</div>
+
+<div class="proof">
+(1) $i \in I$ とする.
+任意の $p \in X$ に対して
+
+$$
+(f g_i)(p) \ne 0 \imp g_i(p) \ne 0
+$$
+
+であるので,
+
+$$
+NZ(fg_i) \ss NZ(g_i)
+$$
+
+である.
+したがって,
+
+$$
+\supp fg_i \ss \supp g_i.
+$$
+
+$\br{\supp g_i}_{i \in I}$ は局所有限であるから,
+
+$$
+\br{\supp fg_i}_{i \in I}
+$$
+
+も局所有限である.
+
+(2) $p \in X$ とする.
+
+$$
+\set{i \in I}{(fg_i)(p) \ne 0} \ss \set{i \in I}{g_i(p) \ne 0}
+$$
+
+であるが, $\br{g_i}_{i \in I}$ の局所有限性より, 右辺は有限集合である.
+したがって,
+
+$$
+\bal
+\par{\ssum{i \in I} fg_i}(p) &= \sum_{\substack{i \in I \\ g_i(p) \ne 0}} f(p) g_i(p) \\
+&= f(p) \sum_{\substack{i \in I \\ g_i(p) \ne 0}} g_i(p) \\
+&= \par{f \ssum{i \in I} g_i}(p)
+\eal
+$$
+
+が成り立つ. 
+</div>
+</section> <!-- end of subsection -->
+
+<section class="subsection">
+<h3>局所有限和の台</h3>
+
+<div class="proposition">
+> $\br{f_i}_{i \in I}$ を $X$ 上の局所有限な関数族とし, $f$ をその局所有限和とする：
+>
+$$
+f = \ssum{i \in I} f_i.
+$$
+>
+> このとき,
+>
+$$
+\supp f \ss \Cup_{i \in I} \supp f_i
+$$
+>
+> が成り立つ.
+</div>
+
+<div class="proof">
+$p \in X$ に対して,
+
+$$
+\all i \in I, \, f_i(p) = 0 \imp f(p) = 0
+$$
+
+であるので,
+
+$$
+f(p) \ne 0 \imp \ex i \in I, \, f_i(p) \ne 0
+$$
+
+である.
+したがって,
+
+$$
+NZ(f) \ss \Cup_{i \in I} NZ(f_i)
+$$
+
+が成り立つ.
+両辺の閉包をとり, $\br{\supp f_i}_{i \in I}$, したがって $\br{NZ(f_i)}_{i \in I}$ が局所有限であることに注意すると,
+
+$$
+\supp f \ss \ol{\Cup_{i \in I} NZ(f_i)} = \Cup_{i \in I} \ol{NZ(f_i)} = \Cup_{i \in I} \supp f_i
+$$
+
+が得られる. 
+</div>
+
+</section> <!-- end of subsection -->
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>
