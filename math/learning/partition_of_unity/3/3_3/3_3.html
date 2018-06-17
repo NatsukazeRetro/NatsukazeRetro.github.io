@@ -47,13 +47,14 @@
 <h3>実数族の非零和</h3>
 
 <div class="definition">
-> 有限個以外は $0$ である実数の族 $\br{a_i}_{i \in I}$ に対して, その**非零和** $\sum_{i \in I}^* a_i$ を
->
+有限個以外は $0$ である実数の族 $\br{a_i}_{i \in I}$ に対して, 
+その<strong>非零和</strong> を
+
 $$
-\sideset{}{^*}\sum_{i \in I \phantom{\,*}} a_i := \sum_{\substack{i \in I \\ a_i \ne 0}} a_i
+\astsum{i \in I} a_i := \summ{i \in I}{a_i \ne 0} a_i
 $$
->
-> で定義する.
+
+で定義する.
 </div>
 
 <p>
@@ -66,7 +67,7 @@ $$
 をみたす $I$ の有限部分集合 $J$ に対して,
 
 $$
-\sideset{}{^*}\sum_{i \in I \phantom{\,*}} a_i = \sum_{i \in J} a_i.
+\astsum{i \in I} a_i = \sum_{i \in J} a_i.
 $$
 </p>
 </section> <!-- end of subsection -->
@@ -79,7 +80,14 @@ $$
 </p>
 
 <div class="definition">
-> $X$ 上の関数族 $\br{f_i}_{i \in I}$ が**局所有限**であるとは, 各関数の台のなす $X$ の部分集合族 $\br{\supp f_i}_{i \in I}$ が局所有限であることである.
+$X$ 上の関数族 $\br{f_i}_{i \in I}$ が<strong>局所有限</strong>であるとは, 
+各関数の台のなす $X$ の部分集合族 
+
+$$
+\br{\supp f_i}_{i \in I}
+$$ 
+
+が局所有限であることである.
 </div>
 </section> <!-- end of subsection -->
 
@@ -95,7 +103,7 @@ p \in \supp f_i
 $$
 
 をみたす $i \in I$ は有限個である.
-有限個の $i \in I$ を除いて
+それら以外の $i \in I$ に対しては,
 
 $$
 p \not\in \supp f_i,
@@ -110,20 +118,27 @@ $$
 であるので, 非零和
 
 $$
-\sideset{}{^*}\sum_{i \in I \phantom{\,*}} f_i(p)
+\astsum{i \in I} f_i(p)
 $$
 
 が定義される.
 </p>
 
 <div class="definition">
-> $X$ 上の局所有限な関数族 $\br{f_i}_{i \in I}$ に対して, その**局所有限和** $\sum_{i \in I}^* f_i$ を
->
+$X$ 上の局所有限な関数族 $\br{f_i}_{i \in I}$ に対して, 
+その<strong>局所有限和</strong> 
+
 $$
-\par{\sideset{}{^*}\sum_{i \in I \phantom{\,*}} f_i}(p) := \sideset{}{^*}\sum_{i \in I \phantom{\,*}} f_i(p) \quad (\all p \in X)
+\astsum{i \in I} f_i
+$$ 
+
+を
+
 $$
->
-> で定義する.
+\par{\astsum{i \in I} f_i}(p) := \astsum{i \in I} f_i(p) \quad (\all p \in X)
+$$
+
+で定義する.
 </div>
 </section> <!-- end of subsection -->
 

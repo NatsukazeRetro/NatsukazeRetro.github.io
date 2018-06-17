@@ -91,18 +91,20 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 
   // いろいろな記号
   TEX.Macro("cc","\\circ");
-  TEX.Macro("nm","\\left\\| #1 \\right\\|", 1);
   TEX.Macro("oo","\\infty");
   TEX.Macro("rd","\\partial");
-  TEX.Macro("supp","\\mathop{\\rm supp}");
 
   // 逆数
   TEX.Macro("phinv","\\varphi^{-1}");
   TEX.Macro("psinv","\\psi^{-1}");
 
   // 自作記号
+  TEX.Macro("astsum","\\sideset{}{^*}\\sum_{#1 \\phantom{*}}", 1);
   TEX.Macro("Coo","C^{\\infty}");
+  TEX.Macro("nm","\\left\\| #1 \\right\\|", 1);
   TEX.Macro("rec","\\frac{1}{#1}", 1);
+  TEX.Macro("summ","\\sum_{\\substack{#1 \\\\ #2}}", 2);
+  TEX.Macro("supp","\\mathop{\\rm supp}");
 
   // 環境
   TEX.Macro("bcs","\\begin{cases}");
