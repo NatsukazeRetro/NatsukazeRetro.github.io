@@ -88,7 +88,7 @@ $$
 </p>
 
 <p>
-この事実は, <a href="">局所有限族</a>の場合へと一般化される.
+この事実は, 局所有限族の場合へと一般化される.
 </p>
 </section> <!-- end of subsection -->
 
@@ -96,17 +96,18 @@ $$
 <h3>局所有限族の場合</h3>
 
 <div class="definition">
-> $X$ の部分集合族 $\br{S_i}_{i \in I}$ が局所有限であれば,
->
+$X$ の部分集合族 $\br{S_i}_{i \in I}$ が局所有限であれば,
+
 $$
 \Cup_{i \in I} \ol{S_i} = \ol{\Cup_{i \in I} S_i}
 $$
->
-> が成り立つ.
+
+が成り立つ.
 </div>
 
 <div class="proof">
-(a) 片側の包含関係は知られているので, もう一方の包含関係
+<p>
+(1) 片側の包含関係は知られているので, もう一方の包含関係
 
 $$
 \Cup_{i \in I} \ol{S_i} \sp \ol{\Cup_{i \in I} S_i}
@@ -120,8 +121,10 @@ p \in \ol{\Cup_{i \in I} S_i}
 $$
 
 をとる.
+</p>
 
-(b) 点 $p$ の開近傍 $U$ で,
+<p>
+(2) 点 $p$ の開近傍 $U$ で,
 
 $$
 U \cap S_i = \emset
@@ -133,40 +136,40 @@ $$
 $$
 U \cap S_i 
 \bcs
-\ne \emset & (i = i_1, \ld, i_m), \\
-= \emset & (i \ne i_1, \ld, i_m).
+\ne \emset & (i = i_1, \, \ld, \, i_m), \\
+= \emset & (i \ne i_1, \, \ld, \, i_m).
 \ecs
 $$
 
 $i \ne i_1$, $\ld$, $i_m$ のとき, $S_i \ss U^c$ であるので,
 
 $$
-\Cup_{i \ne i_1, \ld, i_m} S_i \ss U^c
+\Cup_{i \ne i_1, \, \ld, \, i_m} S_i \ss U^c
 $$
 
 である.
 $U^c$ は閉集合であるので,
 
 $$
-\ol{\Cup_{i \ne i_1, \ld, i_m} S_i} \ss U^c.
+\ol{\Cup_{i \ne i_1, \, \ld, \, i_m} S_i} \ss U^c.
 $$
 
 したがって, 
 
 $$
-p \not\in \ol{\Cup_{i \ne i_1, \ld, i_m} S_i}
+p \not\in \ol{\Cup_{i \ne i_1, \, \ld, \, i_m} S_i}
 $$
 
 である.
+</p>
 
-(c) しかし,
+<p>
+(3) しかし,
 
-$$
-\bal
-p \in \ol{\Cup_{i \in I} S_i} &= \ol{S_{i_1} \cup \cd \cup S_{i_m} \cup \Cup_{i \ne i_1, \ld, i_m} S_i} \\
-&= \ol{S_{i_1}} \cup \cd \cup \ol{S_{i_m}} \cup \ol{\Cup_{i \ne i_1, \ld, i_m} S_i}
-\eal
-$$
+\begin{align*}
+p \in \ol{\Cup_{i \in I} S_i} &= \ol{S_{i_1} \cup \cd \cup S_{i_m} \cup \Cup_{i \ne i_1, \, \ld, \, i_m} S_i} \\
+&= \ol{S_{i_1}} \cup \cd \cup \ol{S_{i_m}} \cup \ol{\Cup_{i \ne i_1, \, \ld, \, i_m} S_i}
+\end{align*}
 
 であるので,
 
@@ -181,6 +184,7 @@ $$
 $$
 
 が示された. 
+</p>
 </div>
 
 </section> <!-- end of subsection -->

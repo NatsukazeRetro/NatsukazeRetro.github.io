@@ -80,6 +80,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("Cup","\\bigcup");
   TEX.Macro("Qup","\\bigsqcup");
   TEX.Macro("ss","\\subset");
+  TEX.Macro("sp","\\supset");
   TEX.Macro("set","\\left\\{ #1 \\; \\middle| \\; #2 \\right\\}", 2);
 
   // 論理記号
