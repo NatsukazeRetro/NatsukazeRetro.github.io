@@ -84,10 +84,11 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("set","\\left\\{ #1 \\; \\middle| \\; #2 \\right\\}", 2);
 
   // 論理記号
+  TEX.Macro("all","\\forall");
+  TEX.Macro("equ","\\, \\Leftrightarrow \\,");
+  TEX.Macro("ex","\\exists");
   TEX.Macro("imp","\\, \\Rightarrow \\,");
   TEX.Macro("impL","\\, \\Leftarrow \\,");
-  TEX.Macro("equ","\\, \\Leftrightarrow \\,");
-  TEX.Macro("all","\\forall");
 
   // いろいろな記号
   TEX.Macro("cc","\\circ");

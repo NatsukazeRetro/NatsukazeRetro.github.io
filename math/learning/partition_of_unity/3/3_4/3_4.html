@@ -51,19 +51,22 @@
 <h3>局所有限和の分配法則</h3>
 
 <div class="proposition">
-> $f$ を $X$ 上の関数とし, $\br{g_i}_{i \in I}$ を $X$ 上の関数族とする.
-> $\br{g_i}_{i \in I}$ が局所有限であるとき, 次の (1) と (2) が成り立つ.
->
-> (1) $\br{f g_i}_{i \in I}$ も局所有限である.
->
-> (2) $\br{f g_i}_{i \in I}$ の局所有限和は分配法則に従う：
->
+$f$ を $X$ 上の関数とし, $\br{g_i}_{i \in I}$ を $X$ 上の関数族とする.
+$\br{g_i}_{i \in I}$ が局所有限であるとき, 次の (1) と (2) が成り立つ.
+
+<ol class="parenthesis-arabic">
+<li>$\br{f g_i}_{i \in I}$ も局所有限である.</li>
+<li>$\br{f g_i}_{i \in I}$ の局所有限和は分配法則に従う：
+
 $$
-\ssum{i \in I} f g_i = f \ssum{i \in I} g_i.
+\astsum{i \in I} f g_i = f \astsum{i \in I} g_i.
 $$
-</div>
+</li>
+</ol>
+</div> <!-- end of proposition -->
 
 <div class="proof">
+<p>
 (1) $i \in I$ とする.
 任意の $p \in X$ に対して
 
@@ -91,7 +94,9 @@ $$
 $$
 
 も局所有限である.
+</p>
 
+<p>
 (2) $p \in X$ とする.
 
 $$
@@ -101,38 +106,38 @@ $$
 であるが, $\br{g_i}_{i \in I}$ の局所有限性より, 右辺は有限集合である.
 したがって,
 
-$$
-\bal
-\par{\ssum{i \in I} fg_i}(p) &= \sum_{\substack{i \in I \\ g_i(p) \ne 0}} f(p) g_i(p) \\
-&= f(p) \sum_{\substack{i \in I \\ g_i(p) \ne 0}} g_i(p) \\
-&= \par{f \ssum{i \in I} g_i}(p)
-\eal
-$$
+\begin{align*}
+\par{\astsum{i \in I} fg_i}(p) &= \summ{i \in I}{g_i(p) \ne 0} f(p) g_i(p) \\
+&= f(p) \summ{i \in I}{g_i(p) \ne 0} g_i(p) \\
+&= \par{f \astsum{i \in I} g_i}(p)
+\end{align*}
 
 が成り立つ. 
-</div>
+</p>
+</div> <!-- end of proof -->
 </section> <!-- end of subsection -->
 
 <section class="subsection">
 <h3>局所有限和の台</h3>
 
 <div class="proposition">
-> $\br{f_i}_{i \in I}$ を $X$ 上の局所有限な関数族とし, $f$ をその局所有限和とする：
->
+$\br{f_i}_{i \in I}$ を $X$ 上の局所有限な関数族とし, $f$ をその局所有限和とする：
+
 $$
-f = \ssum{i \in I} f_i.
+f = \astsum{i \in I} f_i.
 $$
->
-> このとき,
->
+
+このとき,
+
 $$
 \supp f \ss \Cup_{i \in I} \supp f_i
 $$
->
-> が成り立つ.
-</div>
+
+が成り立つ.
+</div> <!-- end of proposition -->
 
 <div class="proof">
+<p>
 $p \in X$ に対して,
 
 $$
@@ -153,14 +158,27 @@ NZ(f) \ss \Cup_{i \in I} NZ(f_i)
 $$
 
 が成り立つ.
-両辺の閉包をとり, $\br{\supp f_i}_{i \in I}$, したがって $\br{NZ(f_i)}_{i \in I}$ が局所有限であることに注意すると,
+両辺の閉包をとり, 
+
+$$
+\br{\supp f_i}_{i \in I},
+$$ 
+
+したがって, 
+
+$$
+\br{NZ(f_i)}_{i \in I}
+$$ 
+
+が局所有限であることに注意すると,
 
 $$
 \supp f \ss \ol{\Cup_{i \in I} NZ(f_i)} = \Cup_{i \in I} \ol{NZ(f_i)} = \Cup_{i \in I} \supp f_i
 $$
 
 が得られる. 
-</div>
+</p>
+</div> <!-- end of proof -->
 
 </section> <!-- end of subsection -->
 
