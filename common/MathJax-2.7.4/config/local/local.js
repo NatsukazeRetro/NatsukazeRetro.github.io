@@ -58,6 +58,10 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   // 筆記体
   TEX.Macro("cF","\\mathcal{F}");
 
+  // ローマン体
+  TEX.Macro("rmi","\\mathrm{i}");
+  TEX.Macro("rmii","\\mathrm{ii}");
+
   // 括弧
   TEX.Macro("par","\\left( #1 \\right)", 1);
   TEX.Macro("br","\\left\\{ #1 \\right\\}", 1);
@@ -104,7 +108,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("Coo","C^{\\infty}");
   TEX.Macro("nm","\\left\\| #1 \\right\\|", 1);
   TEX.Macro("rec","\\frac{1}{#1}", 1);
-  TEX.Macro("summ","\\sum_{\\substack{#1 \\\\ #2}}", 2);
+  TEX.Macro("summ","\\sum_{\\substack{#1 \\\\[0.3em] #2}}", 2);
   TEX.Macro("supp","\\mathop{\\rm supp}");
 
   // 環境

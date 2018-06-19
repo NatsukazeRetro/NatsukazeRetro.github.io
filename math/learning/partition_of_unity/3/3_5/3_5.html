@@ -53,31 +53,36 @@ $\br{f_i}_{i \in I}$ を $X$ 上の局所有限な関数族とし, $J \ss I$ と
 </p>
 
 <div class="proposition">
-> $\br{f_i}_{i \in I}$ を $X$ 上の局所有限な関数族とし,
->
+$\br{f_i}_{i \in I}$ を $X$ 上の局所有限な関数族とし,
+
 $$
 I = \Qup_{\l \in \L} I_{\l}
 $$
->
-> を添字集合 $I$ の直和分割とする.
-> このとき, 次の (1) と (2) が成り立つ.
->
-> (1) 関数族
->
+
+を添字集合 $I$ の直和分割とする.
+このとき, 次の (1) と (2) が成り立つ.
+
+<ol class="parenthesis-arabic">
+<li>関数族
+
 $$
-\br{g_{\l} := \ssum{i \in I_{\l}} f_i}_{\l \in \L}
+\br{g_{\l} := \astsum{i \in I_{\l}} f_i}_{\l \in \L}
 $$
->
-> も局所有限である.
->
-> (2) $\br{f_i}_{i \in I}$ の局所有限和は, その部分和 $g_{\l}$ ($\l \in \L$) の和である：
->
+
+も局所有限である.
+</li>
+<li>
+$\br{f_i}_{i \in I}$ の局所有限和は, その部分和たち $\br{g_{\l}}_{\l \in \L}$ の局所有限和である：
+
 $$
-\ssum{i \in I} f_i = \ssum{\l \in \L} g_{\l}.
+\astsum{i \in I} f_i = \astsum{\l \in \L} g_{\l}.
 $$
-</div>
+</li>
+</ol>
+</div> <!-- end of proposition -->
 
 <div class="proof">
+<p>
 (1) 集合族 $\br{\supp f_i}_{i \in I}$ は局所有限であるから, その部分和のなす集合族
 
 $$
@@ -98,7 +103,9 @@ $$
 $$
 
 も局所有限である.
+</p>
 
+<p>
 (2) $p \in X$ とする.
 $\br{f_i}_{i \in I}$ は局所有限であるから,
 
@@ -110,44 +117,47 @@ $$
 したがって, 有限個の $\l_1$, $\ld$, $\l_m \in \L$ が存在して,
 
 $$
-\l \ne \l_1, \ld, \l_m \imp f_i(p) = 0 \quad (\all i \in I_{\l})
+\l \ne \l_1, \, \ld, \, \l_m \imp f_i(p) = 0 \quad (\all i \in I_{\l})
 $$
 
 となる.
+</p>
 
+<p>
 (i) $\l \ne \l_1$, $\ld$, $\l_m$ のとき,
 
 $$
-g_{\l}(p) = \ssum{i \in I_{\l}} f_i(p) = 0
+g_{\l}(p) = \astsum{i \in I_{\l}} f_i(p) = 0
 $$
 
 である.
+</p>
 
+<p>
 (ii) また,
 
-$$
-\bal
-\set{i \in I}{f_i(p) \ne 0} &= \Qup_{\l \in \L} \set{i \in I_{\l}}{f_i(p) \ne 0} \\
-&= \Qup_{\l = \l_1, \ld, \l_m} \set{i \in I_{\l}}{f_i(p) \ne 0}
-\eal
-$$
+\begin{align*}
+\set{i \in I}{f_i(p) \ne 0} &= \Qup_{\l \in \L} \set{i \in I_{\l}}{f_i(p) \ne 0} \\[0.5em]
+&= \Qup_{\l = \l_1, \, \ld, \, \l_m} \set{i \in I_{\l}}{f_i(p) \ne 0}
+\end{align*}
 
 である.
+</p>
 
+<p>
 これらより,
 
-$$
-\bal
-\par{\ssum{\l \in \L} g_{\l}}(p) &= \sum_{\substack{\l \in \L \\ g_{\l}(p) \ne 0}} g_{\l}(p) \\
-&\overset{(\rmi)}{=} \sum_{\l = \l_1, \ld, \l_m} g_{\l}(p) \\
-&= \sum_{\l = \l_1, \ld, \l_m} \sum_{\substack{i \in I_{\l} \\ f_i(p) \ne 0}} f_i(p) \\
-&\overset{(\rmii)}{=} \sum_{\substack{i \in I \\ f_i(p) \ne 0}} f_i(p) \\
-&= \par{\ssum{i \in I} f_i}(p)
-\eal
-$$
+\begin{align*}
+\par{\astsum{\l \in \L} g_{\l}}(p) &= \summ{\l \in \L}{g_{\l}(p) \ne 0} g_{\l}(p) \\[0.5em]
+&\overset{(\rmi)}{=} \sum_{\l = \l_1, \, \ld, \, \l_m} g_{\l}(p) \\[0.5em]
+&= \sum_{\l = \l_1, \, \ld, \, \l_m} \summ{i \in I_{\l}}{f_i(p) \ne 0} f_i(p) \\[0.5em]
+&\overset{(\rmii)}{=} \summ{i \in I}{f_i(p) \ne 0} f_i(p) \\[0.5em]
+&= \par{\astsum{i \in I} f_i}(p)
+\end{align*}
 
 が成り立つ. 
-</div>
+</p>
+</div> <!-- end of proof -->
 
 </section> <!-- end of section -->
 
