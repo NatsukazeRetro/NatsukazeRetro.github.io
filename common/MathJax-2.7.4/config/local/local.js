@@ -108,7 +108,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("Coo","C^{\\infty}");
   TEX.Macro("nm","\\left\\| #1 \\right\\|", 1);
   TEX.Macro("rec","\\frac{1}{#1}", 1);
-  TEX.Macro("summ","\\sum_{\\substack{#1 \\\\[0.3em] #2}}", 2);
+  TEX.Macro("summ","\\sum_{\\substack{#1 \\\\[0.2em] #2}}", 2);
   TEX.Macro("supp","\\mathop{\\rm supp}");
 
   // 環境

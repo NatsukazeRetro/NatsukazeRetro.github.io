@@ -48,30 +48,60 @@ $n \ge 1$ を整数とし, $M$ を $n$ 次元 $\Coo$ 多様体とする.
 </p>
 
 <div class="proposition">
-> $M$ 上の局所有限な $\Coo$ 関数族 $\br{f_i}_{i \in I}$ に対して, その局所有限和 $f$ は $\Coo$ である.
+$M$ 上の局所有限な $\Coo$ 関数族 
+
+$$
+\br{f_i}_{i \in I}
+$$
+
+に対して, その局所有限和 $f$ は $\Coo$ である.
 </div>
 
 <div class="proof">
-$M$ の任意の点 $p$ に対して, $p$ の開近傍 $U_p$ が存在して,
+<p>
+任意の $p \in M$ に対して, $p$ の開近傍 $U_p$ で,
 
 $$
-U_p \cap \supp f_i \ne \emset
+U_p \cap \supp f_i \ne \emset  \tag{$*$}
 $$
 
-をみたす $i \in I$ は有限個である.
-それらを $i_1$, $\ld$, $i_m$ とする.
-$q \in U_p$ に対して,
+をみたす $i \in I$ が有限個となるようなものが存在する.
+各 $p \in M$ に対して, そのような $U_p$ を $1$ つとるとき, 集合族
 
 $$
-\bal
-f(q) &= \ssum{i \in I} f_i(q) \\
+\br{U_p}_{p \in M}
+$$
+
+は $M$ の開被覆となる.
+</p>
+<p>
+$p \in M$ を $1$ つ固定し, ($*$) をみたす有限個の $i \in I$ を 
+
+$$
+i_1, \, \ld, \, i_m
+$$ 
+
+とする.
+このとき, 任意の $q \in U_p$ に対して,
+
+\begin{align*}
+f(q) &= \astsum{i \in I} f_i(q) \\
 &= f_{i_1}(q) + \cd + f_{i_m}(q) \\
-&= (f_{i_1} + \cd + f_{i_m})(q).
-\eal
-$$
+&= (f_{i_1} + \cd + f_{i_m})(q)
+\end{align*}
 
-$f_{i_1} + \cd + f_{i_m}$ は $U_p$ 上で $\Coo$ であるので, $f$ も $U_p$ 上で $\Coo$ である.
-$\br{U_p}_{p \in M}$ は $M$ を被覆するので, $f$ は $M$ 上で $\Coo$ である. 
+が成り立つ.
+
+$$
+f_{i_1} + \cd + f_{i_m}
+$$ 
+
+は $U_p$ 上 $\Coo$ であるので, $f$ も $U_p$ 上 $\Coo$ である.
+</p>
+
+<p>
+$\br{U_p}_{p \in M}$ は $M$ の開被覆であるので, $f$ は $M$ 上でも $\Coo$ である. 
+</p>
 </div>
 
 
