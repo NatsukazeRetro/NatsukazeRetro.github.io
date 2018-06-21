@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>4.1 関数族の開被覆への従属性</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>4.1 関数族の開被覆への従属性</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<h1>
+第 $4$ 章<br>
+多様体上の単位の分割あるいは１の分割
+</h1>
+
+<section class="section">
+<h2>$4.1$　関数族の開被覆への従属性</h2>
+
+<p>
+以下, $X$ を位相空間とする.
+</p>
+
+<div class="definition">
+$\br{f_{\a}}_{\a \in A}$ を $X$ 上の関数族とし, $\br{U_{\a}}_{\a \in A}$ を $X$ の開被覆とする.
+任意の $\a \in A$ に対して,
+
+$$
+\supp f_{\a} \ss U_{\a}
+$$
+
+が成り立つとき, 関数族 $\br{f_{\a}}_{\a \in A}$ は開被覆 $\br{U_{\a}}_{\a \in A}$ 
+に<strong>強く従属する</strong>という.
+</div> <!-- end of definition -->
+
+<p>
+関数族の添字集合と開被覆の添字集合が, 同じとは限らない場合も考える.
+</p>
+
+<div class="definition">
+$\br{f_i}_{i \in I}$ を $X$ 上の関数族とし, $\br{U_{\a}}_{\a \in A}$ を $X$ の開被覆とする.
+任意の $i \in I$ に対してある $\a \in A$ が存在して,
+
+$$
+\supp f_i \ss U_{\a}
+$$
+
+が成り立つとき, 関数族 $\br{f_i}_{i \in I}$ は開被覆 $\br{U_{\a}}_{\a \in A}$ に<strong>弱く従属する</strong>, あるいは単に, <strong>従属する</strong>という.
+</div> <!-- end of definition -->
+
+<p>
+この場合, 写像 $\t \cln I \to A$ で,
+
+$$
+\supp f_i \ss U_{\t(i)} \quad (\all i \in I)
+$$
+
+をみたすものが存在する.
+このような写像 $\t$ を, 
+<strong>関数族 $\br{f_i}_{i \in I}$ の開被覆 $\br{U_{\a}}_{\a \in A}$ への従属性を示す従属写像</strong>と呼ぶ.
+</p>
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>

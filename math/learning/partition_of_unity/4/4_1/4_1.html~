@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>1.1 タイトル</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>1.1 タイトル</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<h1>
+第 $1$ 章<br>
+タイトル
+</h1>
+
+<section class="section">
+<h2>$1.1$　タイトル</h2>
+
+<section class="subsection">
+<h3>タイトル</h3>
+
+記事
+
+</section> <!-- end of subsection -->
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>
