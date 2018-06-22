@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>4.2 単位の分割あるいは 1 の分割</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>4.2 単位の分割あるいは 1 の分割</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$4.2$　単位の分割あるいは $1$ の分割</h2>
+
+<p>
+以下, 整数 $n \ge 1$ を固定し, $M$ を $n$ 次元 $\Coo$ 多様体とする.
+</p>
+
+<div class="definition">
+$M$ 上の <strong>$\Coo$ 単位の分割</strong>, 
+あるいは <strong>$\Coo$ $1$ の分割</strong>とは, 
+$M$ 上の $\Coo$ 非負関数の族 $\br{f_i}_{i \in I}$ で, 次の条件 (i) と (ii) をみたすもののことである.
+
+<ol class="parenthesis-roman">
+<li>$\br{f_i}_{i \in I}$ は局所有限である.</li>
+<li>$\br{f_i}_{i \in I}$ の局所有限和は $1$ である：
+
+$$
+\astsum{i \in I} f_i = 1.
+$$
+</li>
+</ol>
+</div> <!-- end of definition -->
+
+<div class="paragraph">
+次が我々の目標である：
+
+<blockquote>
+$M$ の任意の開被覆に対して, それに強く従属する $\Coo$ 単位の分割が存在する.
+</blockquote>
+</div> <!-- end of paragraph -->
+
+<p>
+まず, 弱く従属する $\Coo$ 単位の分割の存在から, 強く従属する $\Coo$ 単位の分割の存在が従うことを示す.
+</p> 
+
+<div class="proposition">
+$\br{U_{\a}}_{\a \in A}$ を $M$ の開被覆とする.
+$\br{U_{\a}}_{\a \in A}$ に従属する $\Coo$ 単位の分割が存在すれば, $\br{U_{\a}}_{\a \in A}$ に強く従属する $\Coo$ 単位の分割も存在する.
+</div>
+
+<div class="proof">
+<p>
+$\br{f_i}_{i \in I}$ を $\br{U_{\a}}_{\a \in A}$ に従属する $\Coo$ 単位の分割とし, $\t \cln I \to A$ をその従属写像とする.
+このとき,
+
+$$
+I = \Qup_{\a \in A} I_{\a}, \quad I_{\a} := \tainv(\a)
+$$
+
+である.
+関数族 $\br{f_i}_{i \in I}$ は局所有限であるから, 関数族
+
+$$
+\br{g_{\a} := \astsum{i \in I_{\a}} f_i}_{\a \in A}
+$$
+
+も局所有限であり,
+
+$$
+\astsum{\a \in A} g_{\a} = \astsum{i \in I} f_i = 1
+$$
+
+である.
+</p>
+
+<p>
+(1) $g_{\a}$ は $\Coo$：
+$\Coo$ 関数 $f_i$ の局所有限和であるから.
+</p>
+
+<p>
+(2) $g_{\a}$ は非負：
+$p \in M$ とする.
+各 $f_i$ は非負であるから,
+
+$$
+g_{\a}(p) = \sum_{\substack{i \in I_{\a} \\ f_i(p) \ne 0}} f_i(p) \ge 0.
+$$
+
+(3) $\supp g_{\a} \ss U_{\a}$：
+$i \in I_{\a} = \tainv(\a)$ のとき,
+
+$$
+\supp f_i \ss U_{\t(i)} = U_{\a}
+$$
+
+であるので,
+
+$$
+\supp g_{\a} \ss \Cup_{i \in I_{\a}} \supp f_i \ss U_{\a}.
+$$
+</p>
+
+<p>
+以上より, 関数族 $\br{g_{\a}}_{\a \in A}$ は, 
+開被覆 $\br{U_{\a}}_{\a \in A}$ に強く従属する $\Coo$ 単位の分割である.
+</p>
+</div> <!-- end of proof -->
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>

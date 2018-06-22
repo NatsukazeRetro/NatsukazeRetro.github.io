@@ -100,6 +100,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("rd","\\partial");
 
   // 逆数
+  TEX.Macro("tainv","\\tau^{-1}");
   TEX.Macro("phinv","\\varphi^{-1}");
   TEX.Macro("psinv","\\psi^{-1}");
 
