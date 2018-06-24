@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>4.4 コンパクトな場合</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>4.4 コンパクトな場合</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$4.4$　コンパクトな場合</h2>
+
+<p>
+以下, 整数 $n \ge 1$ を固定し, $M$ を $n$ 次元 $\Coo$ 多様体とする.
+</p>
+
+<p>
+$M$ 上に $\Coo$ 単位の分割が存在することの証明は, $M$ がコンパクトである場合には容易であり,
+また, この特殊な場合の証明により, 一般の場合の考察に対する手がかりが得られる.
+</p>
+
+<div class="proposition">
+$\br{U_{\a}}_{\a \in A}$ を $M$ の開被覆とする.
+$M$ がコンパクトであれば, $\br{U_{\a}}_{\a \in A}$ に従属する $M$ の局所有限な $\Coo$ 正被覆が存在する.
+</div> <!-- end of proposition -->
+
+<div class="proof">
+<p>
+各 $p \in M$ に対して, $p \in U_{\a}$ となる $\a \in A$ が存在するので, その１つを $\a(p)$ とおく.
+$U_{\a(p)}$ 内に台をもち, $p$ で正値をとる $M$ 上の $\Coo$ 非負関数 $f_p$ が存在する.
+集合族 
+
+$$
+\br{PS(f_p)}_{p \in M}
+$$ 
+
+は $M$ の開被覆であるが, $M$ はコンパクトであるから, 
+有限個の点 $p = p_1$, $\ld$, $p_m \in M$ に対する $PS(f_p)$ で $M$ は被覆される：
+
+$$
+M = PS(f_{p_1}) \cup \cd \cup PS(f_{p_m}).
+$$
+
+したがって, $\Coo$ 非負関数の族
+
+$$
+\br{f_{p_i}}_{i=1}^m
+$$
+
+は $M$ の $\Coo$ 正被覆であり, また, 有限族であるから, 局所有限でもある.
+任意の $p \in M$ に対して,
+
+$$
+\supp f_p \ss U_{\a(p)}
+$$
+
+であるので, この関数族は開被覆 $\br{U_{\a}}_{\a \in A}$ に従属している.
+</p>
+</div> <!-- end of proof -->
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>
