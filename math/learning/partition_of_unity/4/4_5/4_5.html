@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>4.5 一般の場合</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>4.5 一般の場合</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$4.5$　一般の場合</h2>
+
+<p>
+以下, 整数 $n \ge 1$ を固定し, $M$ を $n$ 次元 $\Coo$ 多様体とする.
+</p>
+
+<p>
+コンパクトな場合の議論を, 局所コンパクトな場合, すなわち, 一般の場合にも用いてみる.
+（多様体は定義により局所ユークリッドであり, 局所ユークリッドであれば局所コンパクトである.
+局所コンパクトとは, 各点がコンパクトな近傍をもつことである.）
+</p>
+
+<p>
+$M$ は局所コンパクトであるから, コンパクト集合 $K_{\l}$ $(\l \in \L)$ により被覆される.
+コンパクトな場合の議論を思い出せば, 与えられた開被覆に従属するような $\Coo$ 非負関数の有限族
+
+$$
+\br{f_i}_{i \in I_{\l}}
+$$
+
+が存在して, $K_{\l}$ は $\br{PS(f_i)}_{i \in I_{\l}}$ で被覆される.
+</p>
+
+<p>
+$\Coo$ 非負関数族
+
+$$
+\br{f_i}_{i \in I}, \quad I := \Qup_{\l \in \L} I_{\l}
+$$
+
+は, 与えられた開被覆に従属するような $M$ の正被覆であるが, 問題は, これが局所有限とは限らないことである.
+集合族
+
+$$
+\br{\Cup_{i \in I_{\l}} \supp f_i}_{\l \in \L}
+$$
+
+が局所有限であれば, 各 $\br{\supp f_i}_{i \in I_{\l}}$ は有限族であるので, $\br{\supp f_i}_{i \in I}$ も局所有限となるのだが…
+</p>
+
+<p>
+どのようなコンパクト集合による被覆であれば, そのような $f_i$ がとれるだろうか？
+まず分かるのは,
+
+$$
+K_{\l} \ss \Cup_{i \in I_{\l}} PS(f_i) \ss \Cup_{i \in I_{\l}} \supp f_i
+$$
+
+であるので, $\br{K_{\l}}_{\l \in \L}$ は局所有限でなければならない, ということである.
+しかし, それだけではうまくいかないので, 少し強い, 次のような条件を考えてみる.
+</p>
+
+<div class="proposition">
+$\br{K_{\l}}_{\l \in \L}$ を $M$ のコンパクト集合族, $\br{V_{\l}}_{\l \in \L}$ を $M$ の開集合族とし, 以下の (i) から (iii) が成り立つとする.
+
+<ol class="parenthesis-roman">
+  <li>$K_{\l} \ss V_{\l}$ $(\all \l \in \L)$.</li>
+  <li>$\br{K_{\l}}_{\l \in \L}$ は $M$ の被覆である.</li>
+  <li>$\br{V_{\l}}_{\l \in \L}$ は局所有限である.</li>
+</ol>
+
+このとき, $M$ の任意の開被覆に対して, それに従属する $M$ の局所有限な $\Coo$ 正被覆が存在する.
+</div> <!-- end of proposition -->
+
+<div class="proof">
+<div class="paragraph">
+$\br{U_{\a}}_{\a \in A}$ を $M$ の任意の開被覆とする.
+各 $p \in K_{\l}$ に対して, $p \in U_{\a}$ となる $\a \in A$ が存在するので, その１つを $\a(p)$ とおく.
+
+$$
+p \in V_{\l} \cap U_{\a(p)}
+$$
+
+であるので, $V_{\l} \cap U_{\a(p)}$ 内に台をもち, $p$ で正値をとる $M$ 上の $\Coo$ 非負関数 $f_p$ が存在する.
+集合族
+
+$$
+\br{PS(f_p)}_{p \in K_{\l}}
+$$
+
+は $K_{\l}$ の開被覆であるが, $K_{\l}$ はコンパクトであるので, 
+実際には有限個の点 
+
+$$
+p = p_1, \, \ld, \, p_m \in K_{\l}
+$$ 
+
+に対する $PS(f_p)$ で $K_{\l}$ は被覆される.
+$M$ 上の $\Coo$ 非負関数 $f_{p_1}$, $\ld$, $f_{p_m}$ は, 
+
+<ol class="parenthesis-arabic">
+  <li>$\supp f_{p_i} \ss V_{\l} \cap U_{\a(p_i)} \; (\all i = 1, \, \ld, \, m)$,</li>
+  <li>$K_{\l} \ss PS(f_{p_1}) \cup \cd \cup PS(f_{p_m})$,</li>
+</ol>
+
+をみたしている.
+</div> <!-- end of paragraph -->
+
+<div class="paragraph">
+以上より, 次のことが示された：
+
+有限集合の族 $\br{I_{\l}}_{\l \in \L}$ および $M$ 上の $\Coo$ 非負関数の族 
+
+$$
+\br{f_i}_{i \in I}, \quad I := \Qup_{\l \in \L} I_{\l}
+$$
+
+が存在して, 各 $\l \in \L$ に対して, 
+
+<ol class="parenthesis-arabic-dash">
+  <li>$i \in I_{\l} \imp \supp f_i \ss V_{\l} \cap U_{\a} \; (\exists \a \in A)$,</li>
+  <li>$K_{\l} \ss \Cup_{i \in I_{\l}} PS(f_i)$,</li>
+</ol>
+
+をみたす.
+</div> <!-- end of paragraph -->
+
+<p>
+この $M$ 上の $\Coo$ 非負関数族 $\br{f_i}_{i \in I}$ に対して, 以下が成り立つ.
+</p>
+
+<p>
+(A) (2') より, 関数族 $\br{f_i}_{i \in I}$ は $M$ の $\Coo$ 正被覆である.
+</p>
+
+<p>
+(B) (1') より, 関数族 $\br{f_i}_{i \in I}$ は開被覆 $\br{U_{\a}}_{\a \in A}$ に従属する.
+</p>
+
+<p>
+(C) (1') より, 各 $\l \in \L$ に対して,
+
+$$
+\Cup_{i \in I_{\l}} \supp f_i \ss V_{\l}
+$$
+
+である.
+$\br{V_{\l}}_{\l \in \L}$ は局所有限であるから,
+
+$$
+\br{ \Cup_{i \in I_{\l}} \supp f_i }_{\l \in \L}
+$$
+
+も局所有限である.
+$\br{\supp f_i}_{i \in I_{\l}}$ は有限族であるから, $\br{\supp f_i}_{i \in I}$ も局所有限である. 
+</p>
+</div> <!-- end of proof -->
+
+<div class="paragraph">
+さて, 次のことが問題となる：
+
+<blockquote>
+このような $\br{K_{\l} \ss V_{\l}}_{\l \in \L}$ は必ず存在するだろうか？
+</blockquote>
+
+次章では, この問いの答えが肯定的であることを見て, 単位の分割の存在証明を完成させる.
+</div> <!-- end of paragraph -->
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>

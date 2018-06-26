@@ -125,6 +125,19 @@ main ol.parenthesis-arabic li:before {
     content: "(" counter(number) ") ";
 }
 
+main ol.parenthesis-arabic-dash {
+    counter-reset: number;
+    list-style: none;
+    margin-left: 0;
+    text-indent: -1.6em;
+    padding-left: 1.6em;
+}
+
+main ol.parenthesis-arabic-dash li:before {
+    counter-increment: number;
+    content: "(" counter(number) "') ";
+}
+
 main ol.parenthesis-roman {
     counter-reset: number;
     list-style: none;
