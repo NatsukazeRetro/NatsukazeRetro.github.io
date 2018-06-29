@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>5.1 コンパクト集合と開集合からなる縞模様</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>5.1 コンパクト集合と開集合からなる縞模様</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<h1>
+第 $5$ 章<br>
+多様体上の縞模様
+</h1>
+
+<section class="section">
+<h2>$5.1$　コンパクト集合と開集合からなる縞模様</h2>
+
+<p>
+以下, 整数 $n \ge 1$ を固定し, $M$ を $n$ 次元 $\Coo$ 多様体とする.
+</p>
+
+<div class="paragraph">
+与えられた開被覆に強く従属する $M$ 上の $\Coo$ 単位の分割が存在するためには, 
+$M$ 上に, コンパクト集合とそれを含む開集合からなる族
+
+$$
+\br{K_{\l} \ss V_{\l}}_{\l \in \L}
+$$
+
+で, 次の (i) と (ii) をみたすものが存在すればよかった.
+
+<ol class="parenthesis-roman">
+  <li>$\br{K_{\l}}_{\l \in \L}$ は $M$ の被覆である.</li>
+  <li>$\br{V_{\l}}_{\l \in \L}$ は局所有限である.</li>
+</ol>
+</div> <!-- end of paragraph -->
+
+<p>
+このような族は, より単純な, コンパクト集合と開集合からなる "縞模様" から生じる.
+</p>
+
+<div class="proposition">
+$M$ のコンパクト集合列 $\br{F_n}_{n=1}^{\oo}$ と開集合列 $\br{G_n}_{n=1}^{\oo}$ で,
+
+$$
+F_1 \ss G_1 \ss F_2 \ss G_2 \ss \cd \ss F_n \ss G_n \ss \cd,
+$$
+
+および
+
+$$
+M = \Cup_{n=1}^{\oo} F_n
+$$
+
+をみたすものが存在すれば, 
+$M$ のコンパクト集合と, それを含む $M$ の開集合からなる列 
+
+$$
+\br{K_n \ss V_n}_{n=1}^{\oo}
+$$ 
+
+で, 以下の (i) と (ii) をみたすものが存在する.
+
+<ol class="parenthesis-roman">
+  <li>$\br{K_n}_{n=1}^{\oo}$ は $M$ の被覆である.</li>
+  <li>$\br{V_n}_{n=1}^{\oo}$ は自己交叉有限である.</li>
+</ol>
+</div>
+
+<div class="proof">
+<p>
+コンパクト集合列 
+
+$$
+\br{C_n}_{n=1}^{\oo}, \quad \br{C'_n}_{n=1}^{\oo}
+$$ 
+
+と, 開集合列 
+
+$$
+\br{O_n}_{n=1}^{\oo}, \quad \br{O'_n}_{n=1}^{\oo}
+$$ 
+
+で,
+
+\begin{align*}
+&C_1 \, \ss \, O_1 \, \ss \, C'_1 \, \ss \, O'_1 \\[0.3em]
+\, \ss \, &C_2 \, \ss \, O_2 \, \ss \, C'_2 \, \ss \, O'_2 \\[0.3em]
+\, \ss \, &\cd \\[0.3em]
+\, \ss \, &C_n \, \ss \, O_n \, \ss \, C'_n \, \ss \, O'_n \\[0.3em]
+\, \ss \, &\cd 
+\end{align*}
+
+および
+
+$$
+M = \Cup_{n=1}^{\oo} (C_n \cup C'_n)
+$$
+
+をみたすものが存在する（単に, $F_n$, $G_n$ の名前を付け替えればよい）.
+このとき, 任意の $n \ge 1$ に対して, $C'_n = C_n \cup C'_n$ であるから,
+
+$$
+M = \Cup_{n=1}^{\oo} (C_n \cup C'_n) = \Cup_{n=1}^{\oo} C'_n 
+$$
+
+である.
+</p>
+
+<div class="paragraph">
+部分集合列 $\br{K_n}_{n=1}^{\oo}$ を, 隣り合うもの同士が互いに噛み合うように定める：
+
+<ol class="parenthesis-arabic">
+  <li>$K_1 := C'_1$,</li>
+  <li>$K_2 := C'_2 \sm O_1$,</li>
+  <li>
+    $K_3 := C'_3 \sm O_2$,
+    <div style="margin-top: 0.5em;">$\phantom{(3) K_3 : } \, \vd$</div>
+  </li>
+</ol>
+</div> <!-- end of paragraph -->
+
+<figure>
+<img src="fig1.png"></img>
+</figure>
+
+<p>
+一般的に書くと,
+
+$$
+K_n := C'_n \sm O_{n-1} \; (n \ge 1), \quad O_0 := \emset
+$$
+
+である.
+コンパクト集合と閉集合の交わりもコンパクトであるので, 各 $K_n$ はコンパクトである.
+</p>
+
+<div class="paragraph">
+部分集合列 $\br{V_n}_{n=1}^{\oo}$ を, $V_n$ が $K_n$ より一回り大きくなるように定める：
+
+<ol class="parenthesis-arabic">
+  <li>$V_1 := O'_1$,</li>
+  <li>$V_2 := O'_2 \sm C_1$,</li>
+  <li>
+    $V_3 := O'_3 \sm C_2$,
+    <div style="margin-top: 0.5em;">$\phantom{(3) V_3 : } \, \vd$</div>
+  </li>
+</ol>
+</div> <!-- end of paragraph -->
+
+<figure>
+<img src="fig2.png"></img>
+</figure>
+
+<p>
+一般的に書くと,
+
+$$
+V_n := O'_n \sm C_{n-1} \; (n \ge 1), \quad C_0 := \emset
+$$
+
+である.
+各 $n \ge 1$ に対して,
+
+$$
+K_n \ss V_n
+$$
+
+であることは, 定義より明らかである.
+ハウスドルフ空間のコンパクト集合は閉であるので, 各 $V_n$ は開である.
+</p>
+
+<p>
+(i) $\br{K_n}_{n=1}^{\oo}$ は $M$ の被覆である：
+$C'_0 = \emset$ とおくとき, 
+
+$$
+M = \Cup_{n=1}^{\oo} C'_n = \Cup_{n=1}^{\oo} \par{C'_n \sm C'_{n-1}} \ss \Cup_{n=1}^{\oo} \par{C'_n \sm O_{n-1}} = \Cup_{n=1}^{\oo} K_n.
+$$
+</p>
+
+<p>
+(ii) $\br{V_n}_{n=1}^{\oo}$ は自己交叉有限である：
+$k \ge 2$ のとき,
+
+\begin{alignat*}{3}
+V_n &= O'_n \sm C_{n-1} & &\ss O'_n, \\[0.3em]
+V_{n+k} &= O'_{n+k} \sm C_{n+k-1} & &\ss C_{n+k-1}^c
+\end{alignat*}
+
+であり, $O'_n \ss C_{n+k-1}$ であるので,
+
+$$
+V_n \cap V_{n+k} = \emset
+$$
+
+である.
+したがって, $V_n$ と交わる可能性があるのは, $n = 1$ のときは
+
+$$
+V_1, V_2
+$$
+
+のみ, $n \ge 2$ のときは
+
+$$
+V_{n-1}, V_n, V_{n+1}
+$$
+
+のみである.
+</p>
+</div>
+
+<p>
+一般に, 第 $2$ 可算公理をみたす局所コンパクト空間（位相多様体はこの条件をみたす）上には, 
+このようなコンパクト集合と開集合からなる縞模様が存在する.
+本章の目標は, この事実の証明である. 
+</p>
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>

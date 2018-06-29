@@ -83,6 +83,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("emset","\\emptyset");
   TEX.Macro("Cup","\\bigcup");
   TEX.Macro("Qup","\\bigsqcup");
+  TEX.Macro("sm","\\setminus");
   TEX.Macro("ss","\\subset");
   TEX.Macro("sp","\\supset");
   TEX.Macro("set","\\left\\{ #1 \\; \\middle| \\; #2 \\right\\}", 2);
