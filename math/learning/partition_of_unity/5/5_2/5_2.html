@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>5.2 局所コンパクト空間</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>5.2 局所コンパクト空間</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$5.2$　局所コンパクト空間</h2>
+
+<p>
+以下, $X$, $Y$ を位相空間とする.
+</p>
+
+<section class="subsection">
+<h3>劣コンパクト部分集合</h3>
+
+<div class="definition">
+$S$ を集合とする.
+写像 
+
+$$
+\ph: S \to X
+$$ 
+が<strong>劣コンパクト</strong>であるとは, 
+その像 $\ph(S)$ が $X$ のあるコンパクト集合に含まれることである.
+</div>
+
+<p>
+$X$ の部分集合 $S$ が<strong>$X$ において劣コンパクト</strong>であるとは, 包含写像
+
+$$
+S \hto X, \quad x \mto x
+$$
+
+が劣コンパクトであることである.
+すなわち, $S$ が $X$ のあるコンパクト集合に含まれることである.
+全体空間 $X$ が明らかなときには, "$X$ において" を省略し, 単に "劣コンパクト" と言うこともある.
+</p>
+
+<p>
+コンパクト集合の有限和もコンパクトであるので, 劣コンパクト集合の有限和も劣コンパクトである.
+</p>
+
+<p>
+劣コンパクト性は, 連続写像との合成で保存される.
+</p>
+
+<div class="proposition">
+$S$ を集合とする.
+劣コンパクト写像 $\ph: S \to X$ と連続写像 $f \cln X \to Y$ の合成
+
+$$
+f \cc \ph \cln S \uto{\ph} X \uto{f} Y
+$$
+
+は劣コンパクトである.
+</div>
+
+<div class="proof">
+<p>
+コンパクト集合の連続像はコンパクトであるから.
+</p>
+</div>
+
+<p>
+$\ph$ を包含写像にとれば, 次が得られる.
+</p>
+
+<div class="proposition">
+$S$ を $X$ の劣コンパクト部分集合とし, $f \cln X \to Y$ を連続写像とする.
+このとき, $f(S)$ は $Y$ において劣コンパクトである.
+</div>
+
+<p>
+$\ph$ と $f$ を包含写像にとれば, 次が得られる.
+</p>
+
+<div class="proposition">
+$X$ を $Y$ の部分集合とし, $S$ を $X$ の部分集合とする.
+$S$ が $X$ において劣コンパクトであれば, $S$ は $Y$ においても劣コンパクトである.
+</div>
+
+</section> <!-- end of subsection -->
+
+
+<section class="subsection">
+<h3>局所コンパクト空間</h3>
+
+<div class="definition">
+$X$ が<strong>局所コンパクト</strong>であるとは, $X$ の各点がコンパクトな近傍をもつことである：
+各 $p \in X$ に対してコンパクト集合 $K$ が存在し, 
+
+$$
+p \in \Int K.
+$$
+</div>
+
+<p>
+例えば, $\Rn$ の開集合は局所コンパクトである.
+</p>
+
+<div class="paragraph">
+$X$ が局所コンパクトであるための条件は, 次のように言い換えられる：
+
+<div style="width: 80%; margin: 1rem auto;">
+  $X$ の各点がコンパクトな近傍をもつ<br>
+  $\quad \equ$ $X$ の各点が劣コンパクトな開近傍をもつ<br>
+  $\quad \equ$ $X$ は劣コンパクトな開集合で被覆される.
+</div>
+
+</div> <!-- end of paragraph -->
+
+<p>
+さて, $f \cln X \to Y$ を連続かつ開な写像とする.
+このとき, $X$ の劣コンパクトな開集合の $f$ による像は, $Y$ の劣コンパクトな開集合である.
+特に, $X$ が $Y$ の開集合であるとき, $X$ の劣コンパクトな開集合は, $Y$ の劣コンパクトな開集合でもある.
+この事実より, 次が得られる.
+</p>
+
+<div class="proposition">
+$\br{U_{\a}}_{\a \in A}$ を $X$ の開被覆とする.
+各 $U_{\a}$ が局所コンパクトであれば, $X$ も局所コンパクトである.
+</div>
+
+<div class="proof">
+<p>
+各 $U_{\a}$ は, $U_{\a}$ の劣コンパクトな開集合で被覆されるが, それらは $X$ の劣コンパクトな開集合でもある.
+したがって, $X$ は $X$ の劣コンパクトな開集合により被覆される.
+</p>
+</div>
+
+<p>
+系として, 次を得る.
+</p>
+
+<div class="proposition">
+$n \ge 1$ を整数とする.
+$n$ 次元局所ユークリッド空間（各点が $\Rn$ の開集合と同相な開近傍をもつ空間）は, 局所コンパクトである.
+</div>
+
+</section> <!-- end of subsection -->
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>

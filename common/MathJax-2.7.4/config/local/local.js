@@ -35,6 +35,9 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   //   TEX.Macro("R","{\\bf R}");
   //   TEX.Macro("op","\\mathop{\\rm #1}",1); // a macro with 1 parameter
 
+  // Declare Math Operator
+  TEX.Macro("Int","\\operatorname{Int}");
+
   // ギリシャ文字
   TEX.Macro("a","\\alpha");
   TEX.Macro("b","\\beta");
@@ -76,8 +79,10 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("vd","\\vdots");
 
   // 写像記号
-  TEX.Macro("uto","\\overset{#1}{\\longrightarrow}", 1);
   TEX.Macro("cln","\\, \\colon \\,");
+  TEX.Macro("hto","\\hookrightarrow");
+  TEX.Macro("mto","\\mapsto");
+  TEX.Macro("uto","\\overset{#1}{\\longrightarrow}", 1);
 
   // 集合記号
   TEX.Macro("emset","\\emptyset");
