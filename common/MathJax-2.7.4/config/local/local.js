@@ -59,6 +59,8 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   TEX.Macro("RN","{\\mathbb R}^N");
 
   // 筆記体
+  TEX.Macro("cB","\\mathcal{B}");
+  TEX.Macro("cC","\\mathcal{C}");
   TEX.Macro("cF","\\mathcal{F}");
 
   // ローマン体

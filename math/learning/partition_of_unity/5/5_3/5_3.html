@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>5.3 第 2 可算公理をみたす局所コンパクト空間</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>5.3 第 2 可算公理をみたす局所コンパクト空間</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$5.3$　第 $2$ 可算公理をみたす局所コンパクト空間</h2>
+
+<p>
+局所コンパクト空間は劣コンパクトな開集合で被覆されるが, 
+第 $2$ 可算公理をみたす場合には, それらを可算個にとることができる.
+</p>
+
+<p>
+$X$ が第 $2$ 可算公理をみたすとは, $X$ に可算個（有限個を含む）からなる位相の基が存在することである：
+開集合の可算族 
+
+$$
+\br{B_{\l}}_{\l \in \L}
+$$ 
+
+が存在して, 任意の開集合は $B_{\l}$ たちの和として書ける.
+</p>
+
+<div class="paragraph">
+位相多様体には第 $2$ 可算公理が仮定されている.
+位相多様体とは,
+
+<ol class="parenthesis-roman">
+<li>ハウスドルフであり,</li>
+<li> 局所ユークリッドであり,</li>
+<li> 第 $2$ 可算公理をみたす,</li>
+</ol>
+
+位相空間のことである.
+</div>
+
+<div class="proposition">
+第 $2$ 可算公理をみたす局所コンパクト空間 $X$ は, 可算個の劣コンパクトな開集合で被覆される.
+</div> <!-- end of proposition -->
+
+<div class="proof">
+<p>
+(1) $\cB$ を $X$ の可算基とし,
+
+$$
+\cB' := \set{B \in \cB}{\text{$B$ は劣コンパクト}}
+$$
+
+とする.
+
+$$
+X = \Cup_{B \in \cB'} B
+$$
+
+を示せばよい.
+</p>
+
+<p>
+(2) $X$ の任意の劣コンパクトな開集合 $U$ に対して, $\cB$ の部分族 $\cC$ が存在して,
+
+$$
+U = \Cup_{B \in \cC} B
+$$
+
+と書ける.
+各 $B \in \cC$ は劣コンパクト集合 $U$ に含まれるので, それ自身劣コンパクトである.
+したがって, $\cC \ss \cB'$ であり, $U$ は $\cB'$ の要素の和として書ける.
+</p>
+
+<p>
+(3) $X$ は劣コンパクトな開集合で被覆されるので, $X$ も $\cB'$ の要素の和として書ける.
+したがって,
+
+$$
+X \ss \Cup_{B \in \cB'} B
+$$
+
+である. 
+</p>
+
+</div> <!-- end of proof -->
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>
