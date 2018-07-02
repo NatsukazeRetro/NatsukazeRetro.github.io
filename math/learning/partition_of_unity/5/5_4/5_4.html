@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>5.4 縞模様の存在</title>
+
+  <link rel="stylesheet" href="../../../../../common/css/normalize.css"></link>
+  <link rel="stylesheet" href="../../../../../common/css/article.css"></link>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+      },
+      TeX: {
+	equationNumbers: { autoNumber: "AMS" }
+      },
+      CommonHTML: {
+	scale: 100,
+	mtextFontInherit: true
+      }
+    });
+  </script>
+  <script async src="../../../../../common/MathJax-2.7.4/MathJax.js?config=TeX-AMS_CHTML,local/local"></script>
+
+</head>
+
+<body>
+
+<header>
+<nav class="nobr">
+  <h1>多様体上の単位の分割：</h1><!--
+--><ul>
+    <li><a href="../../../../../index.html">目次</a></li><li>5.4 縞模様の存在</li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="section">
+<h2>$5.4$　縞模様の存在</h2>
+
+<div class="proposition">
+$X$ を第 $2$ 可算公理をみたす局所コンパクト空間とする.
+このとき, コンパクト集合列 $\br{F_n}_{n=1}^{\oo}$ と開集合列 $\br{G_n}_{n=1}^{\oo}$ で, 
+次の条件をみたすものが存在する.
+
+<ol class="parenthesis-roman">
+  <li>$F_1 \ss G_1 \ss F_2 \ss G_2 \ss \cd \ss F_n \ss G_n \ss \cd$.</li>
+  <li>$X = \Cup_{n=1}^{\oo} F_n$.</li>
+</ol>
+</div> <!-- end of proposition -->
+
+<div class="proof">
+<p>
+$\br{B_n}_{n=1}^{\oo}$ を, 劣コンパクト開集合による $X$ の被覆とする.
+このとき, 次の (1) と (2) が成り立つ.
+</p>
+
+<p>
+(1) 任意のコンパクト集合 $F$ と任意の $n \ge 1$ に対して, 劣コンパクト開集合 $G$ で,
+
+$$
+F \ss G, \quad B_n \ss G
+$$
+
+をみたすものが存在する：
+
+$$
+F \ss B_1 \cup \cd \cup B_m
+$$
+
+をみたす $m \ge n$ に対して（$F$ はコンパクトなので有限個の $B_i$ で覆われる）,
+
+$$
+G := B_1 \cup \cd \cup B_m
+$$
+
+とおけばよい.
+$G$ は劣コンパクト開集合の有限和であるので, 劣コンパクト開集合である.
+</p>
+
+<p>
+(2) 任意の劣コンパクト開集合 $G$ に対して, コンパクト集合 $F$ で,
+
+$$
+G \ss F
+$$
+
+をみたすものが存在する：
+劣コンパクト集合の定義より自明である.
+</p>
+
+<p>
+(i) (1) と (2) により, 最初にコンパクト集合 $F_1$ を任意にとり（例えば $F_1 = \emset$）, コンパクト集合と劣コンパクト開集合を交互に,
+増大していくようにとることができる.
+このとき, $n$ 番目の劣コンパクト開集合が $B_n$ を含むようにできる：
+コンパクト集合列 $\br{F_n}_{n=1}^{\oo}$ と劣コンパクト開集合列 $\br{G_n}_{n=1}^{\oo}$ が存在して,
+
+\begin{align*}
+&F_1 \ss G_1 \ss F_2 \ss G_2 \ss \cd \ss F_n \ss G_n \ss \cd, \\
+&B_n \ss G_n \quad (\all n \ge 1).
+\end{align*}
+</p>
+
+<p>
+(ii) $\br{B_n}_{n=1}^{\oo}$ は $X$ の被覆であるので,
+
+$$
+X = \Cup_{n=1}^{\oo} B_n \ss \Cup_{n=1}^{\oo} G_n \ss \Cup_{n=1}^{\oo} F_{n+1} \ss \Cup_{n=1}^{\oo} F_n
+$$
+
+である.
+</p>
+</div> <!-- end of proof -->
+
+</section> <!-- end of section -->
+
+</main>
+
+</body>
+
+</html>
